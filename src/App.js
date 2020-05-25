@@ -5,6 +5,7 @@ import Juego from './juegos';
 import Tarea from './tareas';
 import Aprende from './aprender';
 import Realiza from './realizar';
+import Saludo from './saludos';
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
       <Realiza></Realiza>
       <header className="App-header">
       <Juego></Juego>
+    
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+        <Saludo></Saludo>
         <Tarea></Tarea>
           Edit <code>src/App.js</code> and save to reload.
         </p>
