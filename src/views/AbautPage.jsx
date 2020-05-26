@@ -6,7 +6,8 @@ function AbautPage() {
     return (
 		<div className="AbautPage">
 				AbautPage
-        <Button variant="primary">Primary</Button>
+       
+          <Button variant="primary">Primary</Button>
         <Card style={{ width: '18rem' }}>
   <Card.Body>
     <Card.Title>Card Title</Card.Title>
