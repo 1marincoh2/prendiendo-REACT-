@@ -12,8 +12,14 @@ function App() {
 	]
 	return (
 		<div className="App">
-			<ul>
+			<ul>		
 			
+				{
+					pests.map((pet) => (
+						<li>{pet.r}</li>
+					))
+				}
+			</ul>
 			<table>
              <thead>
               <tr>
@@ -33,12 +39,6 @@ function App() {
 			 ))
 			}
             </table>
-				{
-					pests.map((pet) => (
-						<li>{pet.r}</li>
-					))
-				}
-			</ul>
 		</div>
 	);
 }
