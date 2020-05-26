@@ -16,13 +16,11 @@ function App() {
             	
 				pests.map((pet) => (
 					<div>
-						
-						
-						
-                         <ol>{pet.r}</ol>
-                        
-                         
-                        
+							
+			          <ul>
+						  <il>{pet.r}</il>
+					 </ul>
+                                                                       
 						<br/>
 					</div>
 				))
