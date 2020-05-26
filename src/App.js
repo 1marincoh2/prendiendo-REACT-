@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 
 
-
-
 function App() {
 	const pests = [
 		{n: 'animal', r: 'elefante'},
@@ -12,19 +10,13 @@ function App() {
 	]
 	return (
 		<div className="App">
-			{
-            	
-				pests.map((pet) => (
-					<div>
-							
-			          <ul>
-						  <il>{pet.r}</il>
-					 </ul>
-                                                                       
-						<br/>
-					</div>
-				))
-			}
+			<ul>
+				{
+					pests.map((pet) => (
+						<li>{pet.r}</li>
+					))
+				}
+			</ul>
 		</div>
 	);
 }
