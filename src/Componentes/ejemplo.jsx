@@ -1,12 +1,15 @@
 import React from 'react';	 
 
-const pests = [
-	{n: 'animal', r: 'elefante'},
-	{n: 'animal', r: 'pajaro'},
-	{n: 'animal', r: 'gato'}
-]
 
 function ejemplo() {
+
+	const pests = [
+		{n: 'animal', r: 'elefante'},
+		{n: 'animal', r: 'pajaro'},
+		{n: 'animal', r: 'gato'}
+	]
+	
+
 	return (
 
 		<div>
