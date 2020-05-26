@@ -1,11 +1,13 @@
-            <ul>		
+import React from 'react';	 
+	 
+	          <ul>		
 			
 				{
 					pests.map((pet) => (
 						<li>{pet.r}</li>
 					))
 				}
-			</ul>
+	          </ul>
 			
 		<table>
           <thead>
@@ -27,3 +29,5 @@
 			}
 		  </tbody>
         </table>
+
+export default ejemplo
