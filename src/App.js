@@ -4,6 +4,8 @@ import { createRouter } from 'the-react-router'
 import Navbar from './Componentes/Navbar';
 import HomePage from './views/HomePage';
 import AbautPage from './views/AbautPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const routes = {
 	routes: [
