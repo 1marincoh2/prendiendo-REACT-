@@ -1,14 +1,20 @@
 import React from 'react';	 
-	 
+
+const pests = [
+	{n: 'animal', r: 'elefante'},
+	{n: 'animal', r: 'pajaro'},
+	{n: 'animal', r: 'gato'}
+]
+           {
 	          <ul>		
 			
 				{
-					pests.map((pet) => (
+				    pests.map((pet) => (
 						<li>{pet.r}</li>
 					))
 				}
 	          </ul>
-			
+		{
 		<table>
           <thead>
               <tr>
@@ -28,6 +34,6 @@ import React from 'react';
 			 ))
 			}
 		  </tbody>
-        </table>
-
+	}    </table>
+}
 export default ejemplo
