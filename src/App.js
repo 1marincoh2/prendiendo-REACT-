@@ -1,14 +1,33 @@
 import React from 'react';
 import './App.css';
+import { createRouter } from 'the-react-router'
+import Navbar from './Componentes/Navbar';
+import HomePage from './views/HomePage';
+import AbautPage from './views/AbautPage';
 
+const routes = {
+	routes: [
+		{
+			path: '/',
+			exact: true,
+			component: HomePage
+		},
+		{
+			path: '/about',
+			component: AbautPage
+		},
+	]
+}
+const [Router, Routes] = createRouter(routes)
 
 function App() {
-
-	
 	return (
-		<div className="App">
-		
-		</div>
+		<Router>
+			<div style={{backgroundColor: 'gray'}}>
+				<Navbar/>
+			</div>
+			<Routes/>
+		</Router>
 	);
 }
 
