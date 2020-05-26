@@ -4,7 +4,7 @@ function AbautPage() {
 
     return (
 		<div className="AbautPage">
-				
+				AbautPage
 		
 		</div>
 	);
