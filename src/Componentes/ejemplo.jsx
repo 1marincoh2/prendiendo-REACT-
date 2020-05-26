@@ -5,35 +5,39 @@ const pests = [
 	{n: 'animal', r: 'pajaro'},
 	{n: 'animal', r: 'gato'}
 ]
-           {
-	          <ul>		
-			
-				{
-				    pests.map((pet) => (
-						<li>{pet.r}</li>
-					))
-				}
-	          </ul>
-		{
-		<table>
-          <thead>
-              <tr>
-               <th></th>
-			  </tr>
-          </thead>
-		  <tbody>
-			 {
-			 pests.map((pet) =>(
-            				 
-              <tr>
-               <td>{pet.n}</td>
-               <td>{pet.r}</td>
-              </tr>
-              
-             
-			 ))
+
+function ejemplo() {
+	return (
+
+		<div>
+          <ul>		
+			{
+				pests.map((pet) => (
+					<li>{pet.r}</li>
+				))
 			}
-		  </tbody>
-	}    </table>
-}
-export default ejemplo
+		  </ul>
+	
+	<table>
+	  <thead>
+		  <tr>
+		   <th></th>
+		  </tr>
+	  </thead>
+	  <tbody>
+	    {
+		 pests.map((pet) =>(
+						 
+		  <tr>
+		   <td>{pet.n}</td>
+		   <td>{pet.r}</td>
+		  </tr>			 
+		 ))
+		}
+	  </tbody>
+   </table>
+
+	    </div>
+	)
+}			
+	export default ejemplo;
