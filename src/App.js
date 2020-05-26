@@ -7,36 +7,32 @@ import Nombre2 from './Componentes/Nombre2';
 import Nombre3 from './Componentes/Nombre3';
 import Nombre4 from './Componentes/Nombre4';
 
+import Mascota from './Componentes/Mascota';
+import Animal from './Componentes/Animal';
+
 function App() {
-  return (
-    
-      
-    <div className="App">        
-         <Nombre></Nombre> 
-      <header className="App-header">
-      <Nombre1></Nombre1>
-      <Nombre2></Nombre2>
-        <img src={logo} className="App-logo" alt="logo" />
-        <Nombre3></Nombre3>
-        <p>
-        
-        
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          
-          Learn React
-          <Nombre4></Nombre4>
-        </a>
-      </header>
-    </div>
-  );
+	const pests = [
+		{n: 'animal', r: 'elefante'},
+		{n: 'animal', r: 'pajaro'},
+		{n: 'animal', r: 'gato'}
+	]
+	return (
+		<div className="App">
+
+			<Animal name={'cookie'} species={'Perro'}></Animal>
+			<br/>
+			<Mascota name={'cookie'} species={'Perro'}></Mascota>
+			<br/>
+			{
+				pests.map((pet) => (
+					<div>
+						<Animal name={pet.n} species={pet.r}></Animal>
+						<br/>
+					</div>
+				))
+			}
+		</div>
+	);
 }
 
 export default App;
