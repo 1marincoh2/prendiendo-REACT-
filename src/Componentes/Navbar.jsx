@@ -10,7 +10,7 @@ const Navbar = () => {
 
 <Nav
   activeKey="/"
-  onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+ 
     >
   <Nav.Item>
     <Nav.Link href="/">home</Nav.Link>
