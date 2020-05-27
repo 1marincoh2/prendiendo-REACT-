@@ -20,8 +20,8 @@ const routes = {
 		},
 
 		{
-			path: '/axios',
-			component: AbautPage
+			path: '/peticiones',
+			component: AxiosPage
 		},
 	]
 }
