@@ -15,21 +15,21 @@ function List() {
 
 	return (
 		<div>
+            <Button variant="primary" onClick={() => {getUser()}} >Obtener usuarios</Button>
           	{
-				user.map((u)=> 
-                <Button variant="primary" onClick={() => {User()}} >Obtener usuarios</Button>
-                    <Card>
-                    <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                                      
-                    {u.useState}
-                                        
-                  </Card.Body>
+				user.map((u)=>(
+                
+               <Card>
+                    
+                                                         
+                    <li>{u.id}</li>
+                    <li>{u.name}</li>                  
+                    <li>{u.username}</li>
+                    <li>{u.email}</li>
                 </Card>				
-             	)
-        	}
-			
-		</div>
+             	))
+        	} 
+			</div>
 	)
 }
 
