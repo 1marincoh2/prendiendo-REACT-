@@ -5,7 +5,7 @@ import Navbar from './Componentes/Navbar';
 import HomePage from './views/HomePage';
 import AbautPage from './views/AbautPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import AxiosPage from './views/AxiosPage';
 
 const routes = {
 	routes: [
@@ -16,6 +16,11 @@ const routes = {
 		},
 		{
 			path: '/about',
+			component: AbautPage
+		},
+
+		{
+			path: '/axios',
 			component: AbautPage
 		},
 	]

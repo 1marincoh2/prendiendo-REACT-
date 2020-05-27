@@ -8,15 +8,15 @@ const Navbar = () => {
 		
 	<div>
 
-<Nav
-  activeKey="/"
- 
-    >
+<Nav activeKey="/">
   <Nav.Item>
     <Nav.Link href="/">home</Nav.Link>
   </Nav.Item>
   <Nav.Item>
     <Nav.Link href="/about">about</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link href="/axios">axiospage</Nav.Link>
   </Nav.Item>
  </Nav>	
 		
