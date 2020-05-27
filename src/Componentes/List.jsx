@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 function List() {
 	const [user, setUser] = useState([]);
@@ -14,10 +15,20 @@ function List() {
 
 	return (
 		<div>
-			<Button variant="primary" onClick={() => {
-				getUser()
-			}} >Obtener usuarios</Button>
-
+          	{
+				user.map((u)=> 
+                <Button variant="primary" onClick={() => {User()}} >Obtener usuarios</Button>
+                    <Card>
+                    <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                                      
+                    {u.useState}
+                                        
+                  </Card.Body>
+                </Card>				
+             	)
+        	}
+			
 		</div>
 	)
 }
