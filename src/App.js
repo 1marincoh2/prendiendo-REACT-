@@ -25,7 +25,7 @@ const [Router, Routes] = createRouter(routes)
 function App() {
 	return (
 		<Router>
-			<div style={{backgroundColor: 'gray'}}>
+			<div>
 				<Navbar/>
 			</div>
 			<Routes/>
