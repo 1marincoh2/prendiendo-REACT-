@@ -18,16 +18,15 @@ function List() {
             <Button variant="primary" onClick={() => {getUser()}} >Obtener usuarios</Button>
           	{
 				user.map((u)=>(
-                
-               <Card>
-                    
-                                                         
-                    <li>{u.id}</li>
-                    <li>{u.name}</li>                  
-                    <li>{u.username}</li>
-                    <li>{u.email}</li>
-                </Card>				
-             	))
+                    <Card>        
+                     <Card.Body>
+                      <Card.Title>{u.name}</Card.Title>
+                      <Card.Subtitle>{u.id}</Card.Subtitle>
+                      <Card.Text>{u.username}</Card.Text>
+                      <Card.Text>{u.email}</Card.Text>
+                     </Card.Body>
+                    </Card>    
+                     	))
         	} 
 			</div>
 	)
