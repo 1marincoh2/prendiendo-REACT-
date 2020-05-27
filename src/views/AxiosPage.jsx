@@ -1,5 +1,5 @@
 import React from 'react';
-import Lista from './Componentes/List';
+import Lista from '../Componentes/List';
 
 function AxiosPage() {
 
