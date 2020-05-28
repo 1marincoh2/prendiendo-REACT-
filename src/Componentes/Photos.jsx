@@ -35,7 +35,7 @@ function Photos() {
 				photo.map((imag) => (
 					<Card >                     
                      <Card.Img variant="top" src="holder.js/100px180" /> 
-					 <Card.Title>{imag.albumId}</Card.Title>
+					 <Card.Title>{imag.Id}</Card.Title>
 						<Card.Subtitle>{imag.title}</Card.Subtitle>
 						<Card.Text>{imag.url}</Card.Text>
 						<Card.Text>{imag.thumbnailUrll}</Card.Text>
