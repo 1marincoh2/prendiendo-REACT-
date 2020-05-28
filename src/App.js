@@ -6,6 +6,7 @@ import HomePage from './views/HomePage';
 import AbautPage from './views/AbautPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AxiosPage from './views/AxiosPage';
+import TablePage from './views/TablePage';
 
 const routes = {
 	routes: [
@@ -23,6 +24,12 @@ const routes = {
 			path: '/peticiones',
 			component: AxiosPage
 		},
+
+		{
+			path: '/TablasPage',
+			component: TablePage
+		},
+
 	]
 }
 const [Router, Routes] = createRouter(routes)
