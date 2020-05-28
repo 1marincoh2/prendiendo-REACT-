@@ -2,6 +2,7 @@ import React from 'react';
 import Lista from '../Componentes/List';
 import Photo from '../Componentes/Photos';
 import Anime from '../Componentes/Animes';
+import Student from '../Componentes/Students';
 
 
 function AxiosPage() {
@@ -13,6 +14,8 @@ function AxiosPage() {
 				<Photo></Photo>
 				<br/>
 				<Anime></Anime>
+				<br/>
+				<Student></Student>
 
 		</div>
 	)

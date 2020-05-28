@@ -11,7 +11,7 @@ function Animes() {
 
     const getSeries = () => {
 		
-		axios.get('https://api.jikan.moe/v3/search/anime?q=naruto').then((reponse) => {
+		axios.get('https://api.jikan.moe/v3/search/anime?q=dragonball').then((reponse) => {
 			console.log(reponse.data)
             setSerie(reponse.data)
         
@@ -41,8 +41,8 @@ function Animes() {
                 
                 {
 				serie.results.map((personaje) => (
-					<Card >                     
-                     <Card.Img variant="top" src={personaje.image_url} /> 
+					<Card style={{ width: '18rem' }}>                     
+                     <Card.Img variant="top" src={personaje.image_url}/> 
 					 <Card.Title>{personaje.title}</Card.Title>
 						
 	           		</Card>
