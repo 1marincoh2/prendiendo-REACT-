@@ -1,6 +1,5 @@
 import React, { useState, withStyles } from 'react';
 const TableEjemplo = (props) => {
-	const classes = styles;
 	return (
 
 		<div>
@@ -9,7 +8,7 @@ const TableEjemplo = (props) => {
   border: 1px solid black;
   border-collapse: collapse;
 } `}</style>
-			<table className={classes.table}>
+			<table >
 				<thead>
 				<tr>
 					<th>Firstname</th>
