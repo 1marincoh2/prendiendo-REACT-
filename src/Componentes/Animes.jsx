@@ -5,7 +5,7 @@ import { Card } from 'react-bootstrap';
 
 
 function Animes() {
-    const [serie, setSerie] =useState({});
+    const [serie, setSerie] =useState({results:[]});
  
 
 
@@ -27,7 +27,7 @@ function Animes() {
 				getSeries()
 			}}>Serie Animada</Button>
  
-            {	    
+                        	    
 					<Card >
 						<Card.Body>
 							<Card.Title>{serie.request_has}</Card.Title>
@@ -37,18 +37,17 @@ function Animes() {
 						</Card.Body>
 					</Card>
 				
-			}
-
-{
+			
+                
+                {
 				serie.results.map((personaje) => (
 					<Card >                     
-                     <Card.Img variant="top" src="image_url" /> 
+                     <Card.Img variant="top" src={personaje.image_url} /> 
 					 <Card.Title>{personaje.title}</Card.Title>
-					<Card.Subtitle>{personaje.image_url}</Card.Subtitle>
 						
 	           		</Card>
 				))
-			}
+			    }
 
 		</div>
 	);
