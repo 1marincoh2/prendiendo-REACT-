@@ -30,6 +30,12 @@ function List() {
 				loader ? <Spinner animation="border" variant="success"/> : null
 			}
 
+              <style>{`
+              table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+             } `}</style>
+
 			{
 				user.map((u) => (
 					<Card key={u.id}>
