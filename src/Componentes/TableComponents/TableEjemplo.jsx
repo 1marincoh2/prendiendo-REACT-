@@ -1,24 +1,14 @@
 import React, { useState, withStyles } from 'react';
-
-const styles = (theme) => ({
-	table: {
-		border: '1px solid black;',
-		borderCollapse: 'collapse',
-	},
-	th: {
-		border: '1px solid black;',
-		borderCollapse: 'collapse',
-	},
-	td: {
-		border: '1px solid black;',
-		borderCollapse: 'collapse',
-	},
-});
-
-function TableEjemplo(props) {
-	const {classes} = props;
+const TableEjemplo = (props) => {
+	const classes = styles;
 	return (
+
 		<div>
+			<style>{`
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+} `}</style>
 			<table className={classes.table}>
 				<thead>
 				<tr>
@@ -47,7 +37,7 @@ function TableEjemplo(props) {
 			</table>
 
 		</div>
-	);
+	)
 }
 
-export default withStyles(styles)(TableEjemplo);
+export default TableEjemplo
