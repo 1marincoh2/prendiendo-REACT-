@@ -1,5 +1,5 @@
 import React from 'react';
-import GridContenedor from '../Componentes/Gidcomponentes/GridContenedor';
+import GridContenedor from '../Componentes/GridComponentes/GridContenedor';
 
 
 function GridPage() {
