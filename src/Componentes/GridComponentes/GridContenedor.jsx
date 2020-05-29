@@ -1,23 +1,23 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 function GridContenedor() {
     return (
   
         
-     <Container>
+     <Container fluid>
 
-  <Row style={{ borderColor: 'black' }}>
-    <Col style={{ borderColor: 'black' }} xs lg>largo</Col>
-    <Col style={{ borderColor: 'black' }} xs lg>largo</Col>
-    <Col style={{ borderColor: 'black' }} xs sm={8}>mediano</Col>
-    <Col style={{ borderColor: 'black' }} xs sm={8}>mediano</Col>
+  <Row >
+    <Col style={{backgroundColor: 'black'}}  xl={12}>largo</Col>
+    <Col style={{backgroundColor: 'red'}}  xl={12} xs={6}>largo</Col>
+    <Col style={{backgroundColor: 'blue'}} xl={6} xs={6}>mediano</Col>
+    <Col style={{backgroundColor: 'green'}} xl={6} sm={12}>mediano</Col>
   </Row>
   
-</Container>
+   </Container>
 
         
 
