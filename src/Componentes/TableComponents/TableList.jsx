@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import { Spinner } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
+
 
 function TableList() {
 	const [user, setUser] = useState([]);
@@ -36,7 +38,7 @@ function TableList() {
 
 	
 				
-				<table >
+				<Table striped bordered hover>
 					<thead>
 					<tr>
                         
@@ -49,7 +51,7 @@ function TableList() {
 					<tbody>
                     {
                         user.map((u) => (
-					<tr>
+					<tr key={u.id}>
                         
 						<td>{u.name}</td>
 						<td>{u.username}</td>
@@ -58,7 +60,7 @@ function TableList() {
                         ))
                     }
 					</tbody>
-				</table>
+				</Table>
 								
 			
 		</div>

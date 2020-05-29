@@ -41,7 +41,7 @@ function Animes() {
                 
                 {
 				serie.results.map((personaje) => (
-					<Card style={{ width: '18rem' }}>                     
+					<Card style={{ width: '18rem' }} >                     
                      <Card.Img variant="top" src={personaje.image_url}/> 
 					 <Card.Title>{personaje.title}</Card.Title>
 						

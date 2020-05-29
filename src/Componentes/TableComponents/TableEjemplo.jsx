@@ -1,4 +1,4 @@
-import React, { useState, withStyles } from 'react';
+import React from 'react';
 const TableEjemplo = (props) => {
 	return (
 
