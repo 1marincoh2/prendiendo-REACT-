@@ -21,6 +21,9 @@ const Navbar = () => {
 	<Nav.Item>
 		<Nav.Link href="/TablasPage">TablasPage</Nav.Link>
 	</Nav.Item>
+  <Nav.Item>
+		<Nav.Link href="/Grid">Contenedores</Nav.Link>
+	</Nav.Item>
  </Nav>
 
 

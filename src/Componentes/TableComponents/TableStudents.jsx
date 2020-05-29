@@ -11,7 +11,7 @@ function TableStudenst() {
     const [alumno, setAlumno] =useState([]);
     const [loader, setLoader] = useState(false);
 
-
+      
         const getAlumno = () => {
             setLoader(true)		
 		axios.get('https://api-dev.muunyal.telweb.app/school/students').then((reponse) => {
