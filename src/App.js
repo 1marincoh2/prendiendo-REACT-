@@ -6,7 +6,7 @@ import HomePage from './views/HomePage';
 import AbautPage from './views/AbautPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AxiosPage from './views/AxiosPage';
-import TablePage from './views/GridPage';
+import TablePage from './views/TablePage';
 import GridPage from './views/GridPage';
 
 
