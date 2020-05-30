@@ -9,45 +9,31 @@ function GridPractica() {
 
 
      <Container fluid >       
-      
+     
+
 <Row >
-    <Col style={{border: '1px solid #D81B60', backgroundColor: '#AB47BC', height: '1800px' }}  xl={12}>largo
-    
-      <Row> 
-        <Col xl={4} style={{border: '1px solid #004D40', backgroundColor: '#A7FFEB', height: '200px' }}   >largo</Col>
-    </Row>
-
-      <Row xl={{ span: 6, offset: 8 }}>
-       <Col   style={{border: '1px solid #C0CA33', backgroundColor: '#AFB42B'}} >mediano
-        <Row xl={3} md={2}>
-          <Col style={{border: '1px solid #4A148C', backgroundColor: '#E040FB'}}  >mediano</Col>
-          <Row >
-          <Col style={{border: '1px solid #4A148C', backgroundColor: '#E040FB'}}  >mediano</Col>
-        </Row>
-        <Row >
-          <Col style={{border: '1px solid #4A148C', backgroundColor: '#E040FB'}}  >mediano</Col>
-        </Row>
-        <Row >
-          <Col style={{border: '1px solid #4A148C', backgroundColor: '#E040FB'}} xl={12}>mediano</Col>
-          <Row xl={8} md={2}>
-         <Col  style={{border: '1px solid #4A148C', backgroundColor: '#E040FB'}} >median</Col>
-          <Row >
-          <Col style={{border: '1px solid #4A148C', backgroundColor: '#E040FB'}} >mediano</Col>
-          </Row>
-          </Row>
-        
-
-          </Row>
-
-          
-      </Row>
-        
-          
-      </Col>
-      </Row>
-
-    
-   </Col>
+  
+  <Col xl={12} xs={12} style={{border: '1px solid #D81B60', backgroundColor: '#AB47BC', height: '320px'}}  >largo
+  <Row xl={6} xs={12}>
+  <Col xl={4} style={{border: '1px solid #004D40', backgroundColor: '#A7FFEB', height: '320px' }}   >largo</Col>
+  <Col xl={8}style={{border: '1px solid #D81B60',backgroundColor: '#AFB42B', height: '320px' }}  >mediano
+  
+  <Row >
+  <Col xl={4} xs={6} style={{border: '1px solid #D81B60', backgroundColor: '#E040FB', height: '125px'}} >mediano</Col>
+  <Col xl={4} xs={6} style={{border: '1px solid #D81B60', backgroundColor: '#E040FB', height: '125px'}} >mediano</Col>
+  <Col xl={4} xs={6 }style={{border: '1px solid #D81B60', backgroundColor: '#E040FB', height: '125px'}} >mediano</Col>
+  <Col xl={12} xs={6}style={{border: '1px solid #D81B60', backgroundColor: '#4A148C', height: '125px'}}  >mediano</Col>
+  </Row>
+  
+  <Row >
+   <Col xl={6} xs={12} style={{border: '1px solid #D81B60',  backgroundColor:'#4A148C', height: '125px'}} >mediano</Col>
+  <Col xl={6} xs={12}  style={{border: '1px solid #D81B60',  backgroundColor:'#4A148C', height: '125px'}} >mediano</Col>
+  </Row>
+  </Col>
+  </Row>
+  </Col>
+  
+   
 </Row>
 
    </Container>
