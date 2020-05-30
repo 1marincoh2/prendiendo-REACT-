@@ -41,16 +41,16 @@ function GridStudenst() {
 			<Row>
 				{
 					alumno.map((estudiante) => (
-						<Col style={{backgroundColor: 'blue'}} xl={4} xs={6}>{estudiante.matricula}
+						<Col style={{border: '1px solid #D81B60', backgroundColor: '#FFD600'}} xl={4} xs={6}>{estudiante.matricula}
 							<Image width={'100%'} src={estudiante.profilePicture}/>
 							<Row>
-								<Col style={{backgroundColor: 'green'}} xl={6} xs={3}>{estudiante.name}</Col>
+								<Col style={{border: '1px solid #4A148C', backgroundColor: '#388E3C'}} xl={6} xs={3}>{estudiante.name}</Col>
 							</Row>
 							<Row>
-								<Col style={{backgroundColor: 'red'}} xl={6} xs={3}>{estudiante.lastNameFather}</Col>
+								<Col style={{border: '1px solid #D81B60', backgroundColor: '#0D47A1'}} xl={6} xs={3}>{estudiante.lastNameFather}</Col>
 							</Row>
 							<Row>
-								<Col style={{backgroundColor: 'brown'}} xl={6} xs={3}>{estudiante.lastNameMother}</Col>
+								<Col style={{border: '1px solid #D81B60', backgroundColor: '#7B1FA2'}} xl={6} xs={3}>{estudiante.lastNameMother}</Col>
 							</Row>
 						</Col>
 

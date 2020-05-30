@@ -44,8 +44,8 @@ function GridAnime() {
            <Row >
                     {         
                         serie.results.map((personaje) => (
-                        <Col  style={{backgroundColor: 'green'}}  xl={2} xs={6}>{personaje.title}
-                        <Image width={"100%"} src={personaje.image_url}/></Col>
+                        <Col  style={{backgroundColor: '#AB47BC'}}  xl={2} xs={6}>{personaje.title}
+                        <Image  style={{border: '1px solid #D81B60'} } width={"100%"}src={personaje.image_url}/></Col>
 						
                     
                     
