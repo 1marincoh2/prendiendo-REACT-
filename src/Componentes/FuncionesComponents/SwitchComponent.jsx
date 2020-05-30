@@ -1,9 +1,12 @@
 import React from 'react';
 
+
 const SwitchComponent = () => {
 
 	const ejemplo = (dia) => {
+	
 		let day = '';
+		// eslint-disable-next-line default-case
 		switch (dia) {
 			case 0:
 				day = "Sunday";
@@ -25,6 +28,9 @@ const SwitchComponent = () => {
 				break;
 			case  6:
 				day = "Saturday";
+				break;
+			default: 
+			    day = "no existe";
 		}
 
 		return day;
@@ -32,6 +38,7 @@ const SwitchComponent = () => {
 
 	function ejemplo2(dia) {
 		let day = '';
+		// eslint-disable-next-line default-case
 		switch (dia) {
 			case 0:
 				day = "Sunday";
@@ -53,16 +60,25 @@ const SwitchComponent = () => {
 				break;
 			case  6:
 				day = "Saturday";
+				break;
+			default: 
+			    day = "busca otro dia"
 		}
 
 		return day;
+		
 	}
 
-	return <div>
+	return( <div>
 		Dia de la semana "{ejemplo(1)}"
 		<br/>
 		Dia de la semana "{ejemplo2(2)}"
+		<br/>
+		Dia de la semana "{ejemplo(6)}"
+		<br/>
+		Dia de la semana "{ejemplo2(0)}"
 	</div>
+	)
 };
 
 export default SwitchComponent
