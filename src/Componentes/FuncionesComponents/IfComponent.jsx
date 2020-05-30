@@ -10,9 +10,9 @@ const calificacion = (aprobado= 10 ) => {
     if (aprobado < 5) {
         resultado = "si paso el examen";
       } else if (aprobado <9) {
-        resultado = "no paso el examen";
+        resultado = "reprobado";
     } else  {
-        resultado = " paso el examen";
+        resultado = " segunda oportunidad";
    
     };
 
@@ -29,9 +29,9 @@ function calificacion2 (aprobado= 8 ) {
 if (aprobado < 7) {
     resultado = "si paso el examen";
   } else if (aprobado <9) {
-    resultado = "no paso el examen";
+    resultado = "reprobado";
 } else  {
-    resultado = " paso el examen";
+    resultado = " segunad oportunidad";
 
 };
 
