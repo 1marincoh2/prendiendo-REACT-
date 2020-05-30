@@ -24,6 +24,9 @@ const Navbar = () => {
   <Nav.Item>
 		<Nav.Link href="/Contenedores">Contenedores</Nav.Link>
 	</Nav.Item>
+	<Nav.Item>
+		<Nav.Link href="/funciones">Funciones</Nav.Link>
+	</Nav.Item>
  </Nav>
 
 

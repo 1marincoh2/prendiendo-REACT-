@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AxiosPage from './views/AxiosPage';
 import TablePage from './views/TablePage';
 import GridPage from './views/GridPage';
+import FuncionesPage from './views/FuncionesPage';
 
 
 const routes = {
@@ -35,6 +36,10 @@ const routes = {
         {
 			path: '/Contenedores',
 			component: GridPage
+		},
+		{
+			path: '/funciones',
+			component: FuncionesPage
 		},
 
 
