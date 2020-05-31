@@ -3,13 +3,13 @@ import React from 'react';
 const IfComponent = () => {
 
 
-const calificacion = (aprobado= 10 ) => {
+const calificacion = (aprobado= 8) => {
 
         let resultado= '';
 
-    if (aprobado < 5) {
-        resultado = "si paso el examen";
-      } else if (aprobado <9) {
+    if (aprobado < 9) {
+        resultado = "aprobado";
+      } else if (aprobado <10) {
         resultado = "reprobado";
     } else  {
         resultado = " segunda oportunidad";
@@ -27,7 +27,7 @@ function calificacion2 (aprobado= 8 ) {
     let resultado= '';
 
 if (aprobado < 7) {
-    resultado = "si paso el examen";
+    resultado = "aprobado";
   } else if (aprobado <9) {
     resultado = "reprobado";
 } else  {
