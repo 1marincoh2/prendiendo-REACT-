@@ -1,6 +1,8 @@
 import React from 'react';
 import SwitchComponent from '../Componentes/FuncionesComponents/SwitchComponent';
 import IfComponent from '../Componentes/FuncionesComponents/IfComponent';
+import OperadoresComponent from '../Componentes/FuncionesComponents/OperadoresComponent';
+import ArrayComponent from '../Componentes/FuncionesComponents/ArrayComponent';
 
 function FuncionesPage() {
 
@@ -8,6 +10,8 @@ function FuncionesPage() {
         <div className="Switch">
 			<SwitchComponent></SwitchComponent>
 			<IfComponent></IfComponent>
+			<OperadoresComponent></OperadoresComponent>
+			<ArrayComponent></ArrayComponent>
 		</div>
 	);
 }
