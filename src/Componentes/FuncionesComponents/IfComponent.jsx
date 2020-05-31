@@ -3,7 +3,7 @@ import React from 'react';
 const IfComponent = () => {
 
 
-const calificacion = (aprobado= 8) => {
+const calificacion = (aprobado) => {
 
         let resultado= '';
 
@@ -22,7 +22,7 @@ const calificacion = (aprobado= 8) => {
 
 
 
-function calificacion2 (aprobado= 8 ) {
+function calificacion2 (aprobado) {
 
     let resultado= '';
 
@@ -42,9 +42,9 @@ return resultado;
 return( 
 
 <div>
-El resultado es "{calificacion()}"
+El resultado es "{calificacion(8)}"
 <br/>
-El resultado es "{calificacion2()}"
+El resultado es "{calificacion2(10)}"
 </div>
 )
 
