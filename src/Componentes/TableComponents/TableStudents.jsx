@@ -53,7 +53,7 @@ function TableStudenst() {
 				{
 
 					alumno.map((estudiante) => (
-						estudiante.profilePicture !== null ?
+						
 							// estudiante.profilePicture === null ?
 							<tr style={{width: '10rem '}}>
 								<td>{estudiante.id}</td>
@@ -61,10 +61,16 @@ function TableStudenst() {
 								<td>{estudiante.name}</td>
 								<td>{estudiante.lastNameFather}</td>
 								<td>{estudiante.lastNameMother}</td>
-								<td>
-									<Image src={estudiante.profilePicture} style={{width: '5rem '}}/>
+								
+								<td >
+								
+
+  <Image src={estudiante.profilePicture !== null ? estudiante.profilePicture : "https://eloutput.com/app/uploads-eloutput.com/2019/03/sonic-real-imagen-pelicula.jpg"  } style={{width: '5rem '}}/> 
+								
+	                            
 								</td>
-							</tr> : null
+								
+							</tr> 
 					))
 
 				}
