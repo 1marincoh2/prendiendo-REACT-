@@ -54,17 +54,22 @@ function TableStudenst() {
                     
 					<tbody>
                     {
-                        alumno.map((estudiante) => (
+
+                       alumno.map((estudiante) => (
+                     
+                                                              
 					<tr style={{ width: '10rem ' }}>
                         <td>{estudiante.id}</td>
                         <td>{estudiante.matricula}</td>
                         <td>{estudiante.name}</td>
                         <td>{estudiante.lastNameFather}</td>
                         <td>{estudiante.lastNameMother}</td>
-                        <Image src={estudiante.profilePicture}   style={{ width: '5rem ' }}/> 
-						
+                        { 
+                        loader ? <Image  src={ estudiante.profilePicture}  style={{ width: '5rem ' }}/> : null
+                    }
                     </tr>	
                         ))
+                    
                     }
 					</tbody>
 				</Table>
