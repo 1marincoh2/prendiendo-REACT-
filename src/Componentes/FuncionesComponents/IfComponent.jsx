@@ -7,12 +7,12 @@ const calificacion = (aprobado) => {
 
         let resultado= '';
 
-    if (aprobado < 9) {
+    if (aprobado >6) {
         resultado = "aprobado";
-      } else if (aprobado <10) {
+      } else if (aprobado <6) {
         resultado = "reprobado";
     } else  {
-        resultado = " segunda oportunidad";
+        resultado = "regular ";
    
     };
 
@@ -26,12 +26,12 @@ function calificacion2 (aprobado) {
 
     let resultado= '';
 
-if (aprobado < 7) {
+if (aprobado < 10){
     resultado = "aprobado";
-  } else if (aprobado <9) {
+  } else if (aprobado <6) {
     resultado = "reprobado";
 } else  {
-    resultado = " segunad oportunidad";
+    resultado = " regular";
 
 };
 
@@ -42,9 +42,9 @@ return resultado;
 return( 
 
 <div>
-El resultado es "{calificacion(8)}"
+El resultado es "{calificacion(6)}"
 <br/>
-El resultado es "{calificacion2(10)}"
+El resultado es "{calificacion2(7)}"
 </div>
 )
 
