@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
-
 const ArrayComponent = () => {
+
+  
+    
 	const [compras, setArray] = useState([
 		{producto: 'tortilla', precio: 20},
 		{producto: 'refresco', precio: 33},
@@ -12,17 +14,36 @@ const ArrayComponent = () => {
 	])
 
 	const totalCompra = () => {
-		let total = 0;
+		let total = 0
+	   for(let i of compras)  total+=i.precio;
+	   return total;	
+	}	
+		  
+	
+		
+      function totalCompra2() {
 
-		return total;
+		 var total= 0
+		
+		for(var i = 0; i <= compras.length; i++){
+			total+=  compras[i].precio;
+				
+				   
+		}
+		return total;	
+
 	}
 
 	return (
 		<div style={{border: '1px solid blue'}}>
+			
 			total de la compra: {totalCompra()}
+			<br/>
+			total de la compra: {totalCompra2()}
+            
+		</div>)	
+      
+};		
 
-		</div>
-	)
-};
 
-export default ArrayComponent
+export default ArrayComponent;
