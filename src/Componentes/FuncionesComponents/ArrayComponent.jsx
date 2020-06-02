@@ -89,6 +89,25 @@ const ArrayComponent = () => {
 
 	}
 
+    function detalle(pesos){
+          var total=0;
+        var cantidad= totalCompra() {
+		if (pesos<cantidad) {
+			total="me alcansa para tres preductos"
+
+		}  else (cantidad<pesos){ 
+			total="me alcansa para mas"
+		
+		 }
+        }
+        return total;
+	}
+
+	
+
+	
+
+
 	return (
 		<div style={{border: '1px solid blue'}}>
 
@@ -104,6 +123,8 @@ const ArrayComponent = () => {
 			total de la compra: {totalBebida2()}
 			<br/>
 			total de la compra: {totalBebida3()}
+            <br/>
+			total de la compra: {detalle(50)}
 
 		</div>)
 
