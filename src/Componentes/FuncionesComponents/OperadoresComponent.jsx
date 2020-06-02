@@ -18,6 +18,7 @@ const OperadoresComponent = () => {
 		total = valor
 		return total;
 	}
+	
 
 	const sumar = () => {
 		let total = 10;

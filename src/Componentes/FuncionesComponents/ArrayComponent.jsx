@@ -73,24 +73,28 @@ const ArrayComponent = () => {
 
 	function totalCompra2() {
 
-		var total = 0
-
+		var total ={ sipagado:0 , nopagado:0};
+	
 		for (var i = 0; i < compras.length; i++) {
-			total += compras[i].precio;
+			
+		 if (compras[i].pagado ==true ){
+     		 total.sipagado += compras[i].precio
+			
+		}  else {
+			total.nopagado+=compras[i].precio	
 
-
-		}
-		return total;
-
-
+	   }
+	   return total;
 	}
-
+		
+	
+}
 	return (
 		<div style={{border: '1px solid blue'}}>
 
 			total de la compra: {totalCompra()}
 			<br/>
-			total de la compra: {totalCompra2()}
+			total de la compra: {totalCompra2.total()}
 			<br/>
 			total de la compra: {totalBebida()}
 			<br/>
