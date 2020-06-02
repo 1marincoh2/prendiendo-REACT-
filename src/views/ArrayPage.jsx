@@ -1,11 +1,13 @@
 import React from 'react';
-import NuevoObjeto from '../Componentes/ObjetosComponentes/NuevosObjetos';
+import Puntodeventa from '../Componentes/FuncionesComponents/Puntodeventa';
+
+
 
 function ObjetosPage() {
 
     return (
         <div>
-             <NuevoObjeto></NuevoObjeto>
+             <Puntodeventa></Puntodeventa>
 								
 												
 

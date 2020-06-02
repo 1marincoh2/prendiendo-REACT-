@@ -9,7 +9,7 @@ import AxiosPage from './views/AxiosPage';
 import TablePage from './views/TablePage';
 import GridPage from './views/GridPage';
 import FuncionesPage from './views/FuncionesPage';
-import ObjetosPage from './views/ObjetosPage';
+import ArrayPage from './views/ArrayPage';
 
 const routes = {
 	routes: [
@@ -42,8 +42,8 @@ const routes = {
 			component: FuncionesPage
 		},
         {
-			path: '/Objetos',
-			component: ObjetosPage
+			path: '/PuntoVenta',
+			component: ArrayPage
 		},
 
 

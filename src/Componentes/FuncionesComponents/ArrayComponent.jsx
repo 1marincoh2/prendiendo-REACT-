@@ -4,21 +4,21 @@ const ArrayComponent = () => {
 
 
 	const [compras, setArray] = useState([
-		{producto: 'tortilla', precio: 20, pagado: true},
-		{producto: 'refresco', precio: 33, pagado: false},
-		{producto: 'huevo', precio: 3, pagado: true},
-		{producto: 'pan', precio: 5, pagado: false},
-		{producto: 'mantequilla', precio: 10, pagado: true},
-		{producto: 'jabon Ace', precio: 43, pagado: true},
+		{ producto: 'tortilla', precio: 20, pagado: true },
+		{ producto: 'refresco', precio: 33, pagado: false },
+		{ producto: 'huevo', precio: 3, pagado: true },
+		{ producto: 'pan', precio: 5, pagado: false },
+		{ producto: 'mantequilla', precio: 10, pagado: true },
+		{ producto: 'jabon Ace', precio: 43, pagado: true },
 	])
 
 	const [Bebidas, setBebidas] = useState([
-		{producto: 'coca-cola', costo: 31, costo1: 29, vendido: true},
-		{producto: 'cerveza', costo: 37, costo1: 35, vendido: true},
-		{producto: 'pepsi', costo: 32, costo1: 30, vendido: true},
-		{producto: 'big-cola', costo: 15, costo1: 13, vendido: false},
-		{producto: 'agua', costo: 10, costo1: 8, vendido: true},
-		{producto: 'jugos', costo: 20, costo1: 18, vendido: false},
+		{ producto: 'coca-cola', costo: 31, costo1: 29, vendido: true },
+		{ producto: 'cerveza', costo: 37, costo1: 35, vendido: true },
+		{ producto: 'pepsi', costo: 32, costo1: 30, vendido: true },
+		{ producto: 'big-cola', costo: 15, costo1: 13, vendido: false },
+		{ producto: 'agua', costo: 10, costo1: 8, vendido: true },
+		{ producto: 'jugos', costo: 20, costo1: 18, vendido: false },
 	])
 
 
@@ -73,7 +73,7 @@ const ArrayComponent = () => {
 
 	function totalCompra2() {
 
-		var total = {sipagado: 0, nopagado: 0};
+		var total = { sipagado: 0, nopagado: 0 };
 
 		for (var i = 0; i < compras.length; i++) {
 
@@ -89,42 +89,42 @@ const ArrayComponent = () => {
 
 	}
 
-    function detalle(pesos){
-          var total="";
-        var cantidad= totalCompra() 
-		if (cantidad<=pesos) {
-			total="si me alcansa"
+	function detalle(pesos) {
+		var total = "";
+		var cantidad = totalCompra()
+		if (cantidad <= pesos) {
+			total = "si me alcansa"
 
-		}  else   
-			total="no me alcansa "
-		
-		 
-        
-        return total;
+		} else {
+			total = "no me alcansa "
+
+		}
+
+		return total;
 	}
 
-	
 
-	
+
+
 
 
 	return (
-		<div style={{border: '1px solid blue'}}>
+		<div style={{ border: '1px solid blue' }}>
 
 			total de la compra: {totalCompra()}
-			<br/>
+			<br />
 			total de la pagado: {totalCompra2().sipagado}
 			total de la no pagado: {totalCompra2().nopagado}
-			<br/>
+			<br />
 			total de la compra: {totalBebida()}
-			<br/>
+			<br />
 			total de la compra: {totalBebida1()}
-			<br/>
+			<br />
 			total de la compra: {totalBebida2()}
-			<br/>
+			<br />
 			total de la compra: {totalBebida3()}
-            <br/>
-			total de la compra: {detalle(50)}
+			<br />
+			total de la compra: {detalle(114)}
 
 		</div>)
 
