@@ -91,15 +91,15 @@ const ArrayComponent = () => {
 
     function detalle(pesos){
           var total=0;
-        var cantidad= totalCompra() {
+        var cantidad= totalCompra() 
 		if (pesos<cantidad) {
 			total="me alcansa para tres preductos"
 
-		}  else (cantidad<pesos){ 
+		}  else   
 			total="me alcansa para mas"
 		
 		 }
-        }
+        
         return total;
 	}
 
