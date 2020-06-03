@@ -29,6 +29,18 @@ const Puntodeventa = () => {
         }
         return ventatotal;
     };
+    
+    const TotalxProducto = (cantidad,precio) => {
+        
+        const subtotal= cantidad*precio   
+       
+            return subtotal;
+        }
+        
+    
+           
+    
+    
 
 
 
@@ -40,8 +52,8 @@ const Puntodeventa = () => {
             <Row >
 
 
-                <Col style={{ border: '1px solid #D81B60', backgroundColor: '#FFD600' }} xl={8} >
-                    <Table striped bordered hover>
+                <Col style={{ border: '1px solid #D81B60' }} xl={8} >
+                    <Table >
                         <thead>
                             <tr>
 
@@ -58,7 +70,7 @@ const Puntodeventa = () => {
 
                                         <td>{producto.nombre}</td>
                                         <td>{producto.cantidad}pza(s)x${producto.precio}</td>
-                                        <td>{producto.cantidad}</td>
+                                        <td>${(producto.precio*producto.cantidad)}</td>
                                     </tr>
 
                                 ))
@@ -68,7 +80,7 @@ const Puntodeventa = () => {
                 </Col>
             
 
-                    <Col style={{ border: '1px solid #D81B60', backgroundColor: '#7B1FA2' }} xl={4} >
+                    <Col style={{ border: '1px solid #D81B60' }} xl={4} >
 
                         <Table striped bordered hover>
                             <thead>
@@ -101,6 +113,6 @@ const Puntodeventa = () => {
 
 
     )
-}
+};
 
 export default Puntodeventa;
