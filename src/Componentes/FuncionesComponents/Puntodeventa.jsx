@@ -29,18 +29,18 @@ const Puntodeventa = () => {
         }
         return ventatotal;
     };
-    
-    const TotalxProducto = (cantidad,precio) => {
-        
-        const subtotal= cantidad*precio   
-       
-            return subtotal;
-        }
-        
-    
-           
-    
-    
+
+    const TotalxProducto = (cantidad, precio) => {
+
+        const subtotal = cantidad * precio
+
+        return subtotal;
+    }
+
+
+
+
+
 
 
 
@@ -48,7 +48,7 @@ const Puntodeventa = () => {
     return (
 
         <Container fluid>
-          
+
             <Row >
 
 
@@ -70,7 +70,7 @@ const Puntodeventa = () => {
 
                                         <td>{producto.nombre}</td>
                                         <td>{producto.cantidad}pza(s)x${producto.precio}</td>
-                                        <td>${(producto.precio*producto.cantidad)}</td>
+                                        <td>${TotalxProducto(producto.precio, producto.cantidad)}</td>
                                     </tr>
 
                                 ))
@@ -78,30 +78,30 @@ const Puntodeventa = () => {
                         </tbody>
                     </Table>
                 </Col>
-            
-
-                    <Col style={{ border: '1px solid #D81B60' }} xl={4} >
-
-                        <Table striped bordered hover>
-                            <thead>
-                                <tr>
-
-                                    <th>TOTAL</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-
-                                    <td>{Totaldeproductos()}</td>
-                                </tr>
 
 
-                            </tbody>
-                        </Table>
+                <Col style={{ border: '1px solid #D81B60' }} xl={4} >
 
-                    </Col>
-                
+                    <Table striped bordered hover>
+                        <thead>
+                            <tr>
+
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+
+                                <td>{Totaldeproductos()}</td>
+                            </tr>
+
+
+                        </tbody>
+                    </Table>
+
+                </Col>
+
 
 
 
