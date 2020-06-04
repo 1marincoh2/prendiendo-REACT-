@@ -10,6 +10,7 @@ import TablePage from './views/TablePage';
 import GridPage from './views/GridPage';
 import FuncionesPage from './views/FuncionesPage';
 import ArrayPage from './views/ArrayPage';
+import FormPage from './views/FormPage';
 
 const routes = {
 	routes: [
@@ -44,6 +45,10 @@ const routes = {
         {
 			path: '/PuntoVenta',
 			component: ArrayPage
+		},
+		{
+			path: '/formularios',
+			component: FormPage
 		},
 
 
