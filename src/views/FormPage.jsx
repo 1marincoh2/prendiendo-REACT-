@@ -4,6 +4,7 @@ import FormularioPassword from '../Componentes/FormulariosComponents/FormularioP
 import FormularioPrueba from '../Componentes/FormulariosComponents/FormularioPrueba';
 import FormularioRadio from "../Componentes/FormulariosComponents/FormularioRadio";
 import FormularioSelect from "../Componentes/FormulariosComponents/FormularioSelect";
+import FormComponent from "../Componentes/FormulariosComponents/FormComponent";
 
 
 function FormPage() {
@@ -15,6 +16,7 @@ function FormPage() {
 			<FormularioPrueba></FormularioPrueba>
 			<FormularioRadio></FormularioRadio>
 			<FormularioSelect></FormularioSelect>
+			<FormComponent></FormComponent>
 		</>
 	);
 }
