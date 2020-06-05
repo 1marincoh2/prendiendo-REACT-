@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-
+import {Form, Button, Card, Container, Row, Col} from 'react-bootstrap'
 
 const FormComponent = () => {
 
     const [usuario, setValue] = useState({
-        name: '',
-        email: ''
+        email: '',
+        password: '',
     });
 
     const handleSubmit = (event) => {
@@ -27,34 +27,49 @@ const FormComponent = () => {
 
     return (
         <>
+            <Row>
+                <Col></Col>
+                <Col>
+                    <Card style={{width: '18rem'}}>
+                        {JSON.stringify(usuario)}
+                    <Card.Body>
 
-            {JSON.stringify(usuario)}
-            <form onSubmit={handleSubmit}>
+                        <Form>
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control type="email"
+                                              value={usuario.email}
+                                              name="email"
+                                              onChange={(e) => {
+                                                  changeState(e)
+                                              }}
+                                              placeholder="Enter email"/>
+                            </Form.Group>
 
-                <label>
-                    ingresa nombre
-                    <input
-                        type="text"
-                        value={usuario.name}
-                        name="name"
-                        onChange={(e) => {
-                            changeState(e)
-                        }}
-                    />
-                </label>
+                            <Form.Group controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password"
+                                              value={usuario.name}
+                                              name="password"
+                                              onChange={(e) => {
+                                                  changeState(e)
+                                              }}
+                                              placeholder="Password"/>
+                            </Form.Group>
+                            <Form.Group controlId="formBasicCheckbox">
+                                <Form.Check type="checkbox" label="Check me out"/>
+                            </Form.Group>
+                            <Button variant="primary" type="submit" onSubmit={handleSubmit}>
+                                Submit
+                            </Button>
+                        </Form>
+                    </Card.Body>
+                </Card>
+                </Col>
 
-                <label>
-                    ingresa nombre
-                    <input
-                        type="text"
-                        value={usuario.email}
-                        name="email"
-                        onChange={(e) => {
-                            changeState(e)
-                        }}
-                    />
-                </label>
-            </form>
+                <Col></Col>
+            </Row>
+
 
 
         </>

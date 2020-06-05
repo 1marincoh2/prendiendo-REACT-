@@ -21,7 +21,7 @@ function FormularioPassword() {
 						onChange={e => setContraseña(e.target.value)}
 					/>
 				</label>
-				<button onclick={handleboton}>ingresar</button>
+				<button onClick={handleboton}>ingresar</button>
 			</form>
 		</>
 	);
