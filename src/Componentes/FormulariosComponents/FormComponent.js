@@ -59,7 +59,7 @@ const FormComponent = () => {
                             <Form.Group controlId="formBasicCheckbox">
                                 <Form.Check type="checkbox" label="Check me out"/>
                             </Form.Group>
-                            <Button variant="primary" type="submit" onSubmit={handleSubmit}>
+                            <Button variant="primary"  onClick={handleSubmit}>
                                 Submit
                             </Button>
                         </Form>
