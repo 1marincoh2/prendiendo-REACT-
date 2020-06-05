@@ -1,11 +1,11 @@
 import React,{ useState } from 'react';
 import { Table } from 'react-bootstrap';
 
-const InicioList = [];
+
  
 const List1 = () => {
   const [value, setValue] = useState('');
-  const [list, setList] = useState(InicioList);
+  const [list, setList] = useState([]);
  
   const handleChange = (evt) => {
     setValue(evt.target.value);
