@@ -5,7 +5,8 @@ import FormularioPrueba from '../Componentes/FormulariosComponents/FormularioPru
 import FormularioRadio from "../Componentes/FormulariosComponents/FormularioRadio";
 import FormularioSelect from "../Componentes/FormulariosComponents/FormularioSelect";
 import FormComponent from "../Componentes/FormulariosComponents/FormComponent";
-
+import FormSelect from "../Componentes/FormulariosComponents/FormSelect";
+import FormCongrias from "../Componentes/FormulariosComponents/FormCongrias";
 
 function FormPage() {
 
@@ -17,6 +18,8 @@ function FormPage() {
 			<FormularioRadio></FormularioRadio>
 			<FormularioSelect></FormularioSelect>
 			<FormComponent></FormComponent>
+			<FormSelect></FormSelect>
+			<FormCongrias></FormCongrias>
 		</>
 	);
 }

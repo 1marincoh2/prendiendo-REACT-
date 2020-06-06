@@ -3,7 +3,7 @@ import {Form, Button, Card, Container, Row, Col} from 'react-bootstrap'
 
 const FormComponent = () => {
 
-    const [usuario, setValue] = useState({
+    const [usuario, setValor] = useState({
         email: '',
         password: '',
     });
@@ -14,11 +14,11 @@ const FormComponent = () => {
     }
 
 
-    const changeState = (evt, clave) => {
+    const changeValor = (evt, clave) => {
         const {name, value} = evt.target;
 
 
-        setValue(prevState => {
+        setValor(prevState => {
             const object = {...prevState}
             object[name] = value
             return object
@@ -41,7 +41,7 @@ const FormComponent = () => {
                                               value={usuario.email}
                                               name="email"
                                               onChange={(e) => {
-                                                  changeState(e)
+                                                  changeValor(e)
                                               }}
                                               placeholder="Enter email"/>
                             </Form.Group>
@@ -49,10 +49,10 @@ const FormComponent = () => {
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type="password"
-                                              value={usuario.name}
+                                              value={usuario.password}
                                               name="password"
                                               onChange={(e) => {
-                                                  changeState(e)
+                                                  changeValor(e)
                                               }}
                                               placeholder="Password"/>
                             </Form.Group>

@@ -22,7 +22,7 @@ function FormularioPassword() {
 					/>
 				</label>
 				<button onClick={handleboton}>ingresar</button>
-			</form>
+		</form>
 		</>
 	);
 }
