@@ -44,7 +44,7 @@ return(
                         <Form>
                         <label>
                     seleciona tu profesion:
-                    <select value={persona.Select} onChange={changeInput}>
+                    <select value={persona.Select } name="Select" onChange={changeInput}>
                         <option value="doctor">doctor</option>
                         <option value="carpintero">carpintero</option>
                         <option value="maestro">maestro</option>
@@ -55,19 +55,19 @@ return(
                 <form>
 				<div >
 					<input type="radio"
-						   value="male"
-						   checked={persona === "Male"}
-						   onChange={changeInput} name="gender" /> Male
+                           value="Male"
+                           checked={persona.Radio === "Male"}
+						   onChange={changeInput} name="Radio" /> Male
 
 					<input type="radio"
-						   value="Famale"
-						   checked={persona === "Female"}
-						   onChange={changeInput} name="gender" /> Female
+                           value="Famale"                          
+						   checked={persona.Radio === "Female"}
+						   onChange={changeInput} name="Radio" /> Female
 
 					<input type="radio"
-						   value="Other"
-						   checked={persona === "Other"}
-						   onChange={changeInput} name="gender" /> Other
+                           value="Other"
+                           checked={persona.Radio === "Other"}
+						   onChange={changeInput} name="Radio" /> Other
 				</div>
 			</form>
             <form>
@@ -75,8 +75,7 @@ return(
 					
 					<input type="range"
 						   value={persona.rango}
-						   checked={persona === "Other"}
-						   onChange={changeInput} name="gender" /> edad
+						   onChange={changeInput} name="rango" /> edad
 				</div>
 			</form>
                             <Button variant="primary"  onClick={handleSubmit}>

@@ -69,7 +69,7 @@ const Nombre = () => {
                                    
                                 </Table>
                                 <Form onSubmit={handleSubmit}>
-                                    <input type="text" value={name.primernombre} onChange={handleChange} />
+                                    <input type="text" value={primernombre} onChange={handleChange} />
                                     <Button type="submit">ingresa el nombre</Button>
                                 </Form>
                                 </Col>
@@ -94,7 +94,7 @@ const Nombre = () => {
                               
                                 </Table>
                                 <Form onSubmit={handleSubmit1}>
-                                    <input type="text" value={name.segundonombre} onChange={handleChange} />
+                                    <input type="text" value={segundonombre} onChange={handleChange} />
                                     <Button type="submit">segunod nombre</Button>
                                 </Form>
                             
