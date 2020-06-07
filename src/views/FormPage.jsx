@@ -19,7 +19,7 @@ function FormPage() {
 			<FormularioSelect></FormularioSelect>
 			<FormComponent></FormComponent>
 			<FormSelect></FormSelect>
-			<FormCongrias></FormCongrias>
+			{/*<FormCongrias></FormCongrias>*/}
 		</>
 	);
 }
