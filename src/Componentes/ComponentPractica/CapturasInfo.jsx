@@ -50,14 +50,23 @@ const CapturasInfo = () => {
 
     return (
         <>
-            <Row>
-           
-                  
-                  
-                         
-        
-                <Col xs={12} sm={4} md={4} xl={4}></Col>
-                <Col xs={12} sm={12} md={12} xl={12}>
+
+            <Row >
+
+
+
+          
+                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} >Nombres<input type="text" value={datos.Nombres} name="Nombres" onChange={changeInput} /> </Col>
+                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} >Primer Apellido<input type="text" value={datos.primerApellido} name="primerApellido" onChange={changeInput} /></Col>
+                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} >Segundo Apellido<input type="text" value={datos.segundoApellido} name="segundoApellido" onChange={changeInput} /></Col>
+                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} > <Button variant="primary" onClick={handleGuardar}>guardar informacion
+                                </Button></Col>
+               
+               
+          
+                                           
+                <Col xl={12} xs={6} >
+
 
                     <style>{`
               table, th, td {
@@ -67,16 +76,13 @@ const CapturasInfo = () => {
 
 
                     <Table striped bordered hover>
-                  
-                        <thead > 
-                            <tr onSubmit={handleGuardar}>
 
-                                <th> Nombres<input type="text" value={datos.Nombres} name="Nombres" onChange={changeInput} /></th>
-                                <th>primerApellido  <input type="text" value={datos.primerApellido} name="primerApellido" onChange={changeInput} /> </th>
-                                <th>segundoApellido  <input type="text" value={datos.segundoApellido} name="segundoApellido" onChange={changeInput} /></th>
-                                <Button variant="primary" onClick={handleGuardar}>
-                        Guardar informacion
-                                </Button>
+                        <thead >
+                            <tr>
+
+                                <th> Nombres</th>
+                                <th>primerApellido </th>
+                                <th>segundoApellido  </th>
                             </tr>
 
                         </thead>
@@ -95,9 +101,12 @@ const CapturasInfo = () => {
                         </tbody>
                     </Table>
                 </Col>
+
+
+
+
+             
             </Row>
-
-
 
 
         </>
