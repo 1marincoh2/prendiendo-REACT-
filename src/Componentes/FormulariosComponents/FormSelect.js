@@ -6,8 +6,8 @@ const FormSelect = () => {
 
 const[persona, setPersona ]= useState({
  
-    Select:'',
-    Radio:'',
+    Select:'doctor',
+    Radio:'Male',
     rango:'',
 });
 
@@ -60,7 +60,7 @@ return(
 						   onChange={changeInput} name="Radio" /> Male
 
 					<input type="radio"
-                           value="Famale"                          
+                           value="Female"                          
 						   checked={persona.Radio === "Female"}
 						   onChange={changeInput} name="Radio" /> Female
 
