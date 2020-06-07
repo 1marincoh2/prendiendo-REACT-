@@ -1,15 +1,15 @@
 import React, {useState} from 'react'
-import {Form, Button, Card, Row, Col, Table} from 'react-bootstrap'
+import {Form, Button, Card,Row, Col, Table} from 'react-bootstrap'
 
 
 const FormSelect = () => {
     const [personas, setPersonas] = useState([]);
 
-    const [persona, setPersona] = useState({
-        Select: '',
-        Radio: '',
-        rango: '',
-    });
+const[persona, setPersona ]= useState({
+    Select:'doctor',
+    Radio:'Male',
+    rango: 5,
+});
 
 
     const handleSubmit = (event) => {
@@ -74,10 +74,10 @@ const FormSelect = () => {
                                                checked={persona.Radio === "Male"}
                                                onChange={changeInput} name="Radio"/> Male
 
-                                        <input type="radio"
-                                               value="Famale"
-                                               checked={persona.Radio === "Female"}
-                                               onChange={changeInput} name="Radio"/> Female
+					<input type="radio"
+                           value="Female"
+						   checked={persona.Radio === "Female"}
+						   onChange={changeInput} name="Radio" /> Female
 
                                         <input type="radio"
                                                value="Other"
