@@ -33,6 +33,10 @@ const Navbar = () => {
 	<Nav.Item>
 		<Nav.Link href="/formularios">Formularios</Nav.Link>
 	</Nav.Item>
+    <Nav.Item>
+		<Nav.Link href="/Inputtext">Capturas</Nav.Link>
+	</Nav.Item>
+
  </Nav>
 
 

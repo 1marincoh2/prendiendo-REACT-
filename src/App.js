@@ -11,6 +11,8 @@ import GridPage from './views/GridPage';
 import FuncionesPage from './views/FuncionesPage';
 import ArrayPage from './views/ArrayPage';
 import FormPage from './views/FormPage';
+import Formtextpage from './views/Formtextpage';
+
 
 const routes = {
 	routes: [
@@ -51,7 +53,10 @@ const routes = {
 			component: FormPage
 		},
 
-
+		{
+			path: '/Inputtext',
+			component: Formtextpage
+		},
 
 	]
 }

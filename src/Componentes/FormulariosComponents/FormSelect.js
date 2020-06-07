@@ -3,7 +3,7 @@ import {Form, Button, Card,Row, Col, Table} from 'react-bootstrap'
 
 
 const FormSelect = () => {
-    const [personas, setPersonas] = useState([]);
+const [personas, setPersonas] = useState([]);
 
 const[persona, setPersona ]= useState({
     Select:'doctor',
