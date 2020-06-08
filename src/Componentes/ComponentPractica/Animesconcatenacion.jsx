@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button } from 'react-bootstrap';
-import { Card } from 'react-bootstrap';
-import { Table } from 'react-bootstrap';
+import { Button, Image, Container,Row,Col } from 'react-bootstrap';
+
+
 
 const Animesconcatenacion = () => {
    const [anime, setAnime] = useState('');
@@ -42,33 +42,35 @@ const Animesconcatenacion = () => {
     <>
  
 
-      <form onSubmit={handlebuscar}>
+       
+     <Container fluid>
+               
+     <form onSubmit={handlebuscar}>
            <input type="text" value={anime} onChange={handleChange} />
 <Button  variant="primary" onClick={() => {
     getSeries() 
 }}>buscar</Button>
-</form>
-                    
-        <Card >
-            <Card.Body>
-                <Card.Title>{serie.request_has}</Card.Title>
-                <Card.Subtitle>{serie.request_cached}</Card.Subtitle>
-                <Card.Text>{serie.request_cache_expiry}</Card.Text>
-                <Card.Text>{serie.last_page}</Card.Text>
-            </Card.Body>
-        </Card>
-    
-
-    
-    {
-    serie.results.map((personaje) => (
-        <Card style={{ width: '18rem' }} >                     
-         <Card.Img variant="top" src={personaje.image_url}/> 
-         <Card.Title>{personaje.title}</Card.Title>
+</form>  
             
-           </Card>
-    ))
-    }
+           <Row >
+                    {         
+                        serie.results.map((personaje) => (
+                        <Col  style={{backgroundColor: '#AB47BC'}}  xl={2} xs={6}>{personaje.title}
+                        <Image  style={{border: '1px solid #D81B60'} } width={"100%"}src={personaje.image_url}/></Col>
+						
+                    
+                    
+                        ))
+
+                    }
+
+                    
+
+
+    </Row>
+
+ </Container>
+
 </>
 
   );
