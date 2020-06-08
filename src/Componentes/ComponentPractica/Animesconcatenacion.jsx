@@ -46,7 +46,7 @@ const Animesconcatenacion = () => {
            <input type="text" value={anime} onChange={handleChange} />
 <Button  variant="primary" onClick={() => {
     getSeries() 
-}}>Serie Animada</Button>
+}}>buscar</Button>
 </form>
                     
         <Card >
