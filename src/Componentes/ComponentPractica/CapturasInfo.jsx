@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { Form, Button, Card, Row, Col, Table } from 'react-bootstrap'
+import React, {useState} from 'react'
+import {Form, Button, Card, Row, Col, Table} from 'react-bootstrap'
 
 const CapturasInfo = () => {
 
     const [datos, setDatos] = useState([]);
 
     const [dato, setDato] = useState({
+        id: 0,
         Nombres: '',
         primerApellido: '',
         segundoApellido: '',
@@ -13,19 +14,33 @@ const CapturasInfo = () => {
 
 
     const handleGuardar = (event) => {
-        event.preventDefault()
         setDatos(prevState => {
             const inf = [...prevState]
-            inf.push(dato)
+            const newdata = {...dato}
+            newdata.id = inf.length + 1
+            inf.push(newdata)
             restartdato()
             return inf
         })
 
     }
 
+    const handleActualizar = () => {
+        setDatos(prevState => {
+            const newdatos = [...prevState]
+            const index = newdatos.findIndex((newdato) => newdato.id === dato.id)
+            if (index > -1) {
+                newdatos.splice(index, 1, dato)
+            }
+            restartdato()
+            return newdatos
+        })
+    }
+
     const restartdato = () => {
         setDato(prevState => {
-            const object = { ...prevState }
+            const object = {...prevState}
+            object.id = 0
             object.Nombres = ''
             object.primerApellido = ''
             object.segundoApellido = ''
@@ -33,39 +48,72 @@ const CapturasInfo = () => {
         })
     }
 
-
-
     const changeInput = (evt, clave) => {
-        const { name, value } = evt.target;
+        const {name, value} = evt.target;
 
         setDato(prevState => {
-            const object = { ...prevState }
+            const object = {...prevState}
             object[name] = value
             return object
         })
 
     }
 
+    const editar = (datoEditar) => {
+        setDato(datoEditar)
+    }
 
 
     return (
         <>
 
-            <Row >
+            <Row>
+                <Col xl={4} xs={4}></Col>
+                <Col xl={4} xs={4}>
+                    <Card style={{width: '18rem'}}>
+                        {JSON.stringify(dato)}
+                        <Card.Body>
 
+                            <Form>
+                                <Form.Group controlId="formBasicEmail">
+                                    <Form.Label>Nombres</Form.Label>
+                                    <input type="text"
+                                           value={dato.Nombres}
+                                           name="Nombres"
+                                           onChange={changeInput}/>
+                                </Form.Group>
 
+                                <Form.Group controlId="formBasicPassword">
+                                    <Form.Label>Primer Apellido</Form.Label>
+                                    <input type="text"
+                                           value={dato.primerApellido}
+                                           name="primerApellido"
+                                           onChange={changeInput}/>
+                                </Form.Group>
 
-          
-                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} >Nombres<input type="text" value={datos.Nombres} name="Nombres" onChange={changeInput} /> </Col>
-                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} >Primer Apellido<input type="text" value={datos.primerApellido} name="primerApellido" onChange={changeInput} /></Col>
-                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} >Segundo Apellido<input type="text" value={datos.segundoApellido} name="segundoApellido" onChange={changeInput} /></Col>
-                <Col xl={3} xs={6} style={{ border: '1px solid #D81B60',  }} > <Button variant="primary" onClick={handleGuardar}>guardar informacion
-                                </Button></Col>
-               
-               
-          
-                                           
-                <Col xl={12} xs={6} >
+                                <Form.Group controlId="formBasicPassword">
+                                    <Form.Label>Segundo Apellido</Form.Label>
+                                    <input type="text"
+                                           value={dato.segundoApellido}
+                                           name="segundoApellido"
+                                           onChange={changeInput}/>
+                                </Form.Group>
+                                Segundo Apellido
+                                <Button variant="primary" onClick={() => {
+                                    if (dato.id === 0) {
+                                        handleGuardar()
+                                    } else {
+                                        handleActualizar()
+                                    }
+                                }}>
+                                    {dato.id === 0 ? 'Agregar' : 'Actualizar'}
+                                </Button>
+                            </Form>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col xl={4} xs={4}></Col>
+                <Col xl={12} xs={6}>
 
 
                     <style>{`
@@ -77,35 +125,39 @@ const CapturasInfo = () => {
 
                     <Table striped bordered hover>
 
-                        <thead >
-                            <tr>
+                        <thead>
+                        <tr>
 
-                                <th> Nombres</th>
-                                <th>primerApellido </th>
-                                <th>segundoApellido  </th>
-                            </tr>
+                            <th> Id</th>
+                            <th> Nombres</th>
+                            <th>primerApellido</th>
+                            <th>segundoApellido</th>
+                            <th>Accion</th>
+                        </tr>
 
                         </thead>
 
                         <tbody>
-                            {
-                                datos.map((dat) => (
-                                    <tr key={dat.Nombres}>
-
-                                        <td>{dat.Nombres}</td>
-                                        <td>{dat.primerApellido}</td>
-                                        <td>{dat.segundoApellido}</td>
-                                    </tr>
-                                ))
-                            }
+                        {
+                            datos.map((dat) => (
+                                <tr key={dat.id}>
+                                    <td>{dat.id}</td>
+                                    <td>{dat.Nombres}</td>
+                                    <td>{dat.primerApellido}</td>
+                                    <td>{dat.segundoApellido}</td>
+                                    <td>
+                                        <Button onClick={() => {
+                                            editar(dat)
+                                        }}>Editar</Button>
+                                    </td>
+                                </tr>
+                            ))
+                        }
                         </tbody>
                     </Table>
                 </Col>
 
 
-
-
-             
             </Row>
 
 
