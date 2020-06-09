@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Card, Row, Table, Modal } from 'react-bootstrap'
 
-const CapturasInfo = () => {
+const InfActualizada = () => {
 
     const [fruts, setFruts] = useState([
         {
@@ -73,8 +73,20 @@ const CapturasInfo = () => {
         })
         handleClose() 
     }
+    const handleEliminar = () => {
+        setFruts(remove => {
+            const borrardatos = [...remove]
+            const index = borrardatos.findIndex((borrardatos) => borrardatos.id === frut.id)
+            if (index > -1) {
+                borrardatos.splice(index, 1, )
+            }
+            return borrardatos
+                })
 
-    const restartdato = () => {
+
+       }
+
+                const restartdato = () => {
         setFrut(prevState => {
             const object = { ...prevState }
             object.id = 0
@@ -206,6 +218,10 @@ const CapturasInfo = () => {
                                     <Button onClick={() => {
                                         editar(dat)
                                     }}>Editar</Button>
+                                    <Button onClick={handleEliminar} 
+                                        
+                                    >eliminar</Button>
+
                                     </td>
                                 </tr>
                             ))
@@ -221,4 +237,4 @@ const CapturasInfo = () => {
         </>
     )
 }
-export default CapturasInfo;
+export default InfActualizada;
