@@ -73,12 +73,12 @@ const InfActualizada = () => {
         })
         handleClose() 
     }
-    const handleEliminar = () => {
-        setFruts(remove => {
-            const borrardatos = [...remove]
+    const handleEliminar = (dat) => {
+        setFruts(prevState => {
+            const borrardatos = [...prevState]
             const index = borrardatos.findIndex((borrardatos) => borrardatos.id === frut.id)
             if (index > -1) {
-                borrardatos.splice(index, 1, )
+                borrardatos.splice(index, 1 )
             }
             return borrardatos
                 })
@@ -218,9 +218,9 @@ const InfActualizada = () => {
                                     <Button onClick={() => {
                                         editar(dat)
                                     }}>Editar</Button>
-                                    <Button onClick={handleEliminar} 
-                                        
-                                    >eliminar</Button>
+                                    <Button onClick={() => {
+                                      handleEliminar(dat)
+                                    }}>eliminar</Button>
 
                                     </td>
                                 </tr>
