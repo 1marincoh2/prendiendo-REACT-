@@ -45,19 +45,26 @@ const CapturasInfo = () => {
     const handleClose = () => setAbrir(false);
     const handleShow = () => setAbrir(true);
 
+            
 
-
-    const handleGuardar = (event) => {
-        setFruts(prevState => {
+    const handleGuardar= (event) => {
+            setFruts(prevState => {
             const inf = [...prevState]
             const newdata = { ...frut }
             newdata.id = inf.length + 1
             inf.push(newdata)
             restartdato()
-            return inf
+           return inf
         })
-
-    }
+                  
+            if(restartdato()){
+               handleGuardar()
+            }else{
+              handleClose()
+            }
+            }        
+        
+    
 
     const handleActualizar = () => {
         setFruts(prevState => {
@@ -75,11 +82,11 @@ const CapturasInfo = () => {
         setFrut(prevState => {
             const object = { ...prevState }
             object.id = 0
-            object.fruta = 'platano'
-            object.verduras = 'cebollas'
-            object.legunbres = 'frijol'
-            object.carne = 'cerdo'
-            object.bebidas = 'refresco'
+            object.fruta = ''
+            object.verduras = ''
+            object.legunbres = ''
+            object.carne = ''
+            object.bebidas =''
             return object
         })
     }
