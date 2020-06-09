@@ -56,13 +56,8 @@ const CapturasInfo = () => {
             restartdato()
            return inf
         })
-                  
-            if(restartdato()){
-               handleGuardar()
-            }else{
-              handleClose()
-            }
-            }        
+         handleClose()                
+      }        
         
     
 
@@ -76,6 +71,7 @@ const CapturasInfo = () => {
             restartdato()
             return newdatos
         })
+        handleClose() 
     }
 
     const restartdato = () => {
@@ -104,7 +100,10 @@ const CapturasInfo = () => {
 
     const editar = (datoEditar) => {
         setFrut(datoEditar)
+         handleShow()
     }
+
+
 
 
     return (
@@ -204,13 +203,9 @@ const CapturasInfo = () => {
                                     <td>{dat.carne}</td>
                                     <td>{dat.bebidas}</td>
                                     <td>
-                                        <Button onClick={() => {
-                                            if (editar(dat)) {
-                                                handleActualizar()
-                                            } else {
-                                                handleShow()
-                                            }
-                                        }}>Editar</Button>
+                                    <Button onClick={() => {
+                                        editar(dat)
+                                    }}>Editar</Button>
                                     </td>
                                 </tr>
                             ))
