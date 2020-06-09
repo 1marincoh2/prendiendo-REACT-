@@ -3,7 +3,14 @@ import {Form, Button, Card, Row, Col, Table} from 'react-bootstrap'
 
 const CapturasInfo = () => {
 
-    const [fruts, setFruts] = useState([]);
+    const [fruts, setFruts] = useState([
+        {id:1,fruta: 'platano'},
+        {id:2, verduras: 'cebollas'},
+        {id:3, legunbres: 'frijol'},
+        {id:4, carne: 'cerdo'},
+        {id:5,bebidas: 'refresco'}
+       
+      ]);
 
     const [frut, setFrut] = useState({
     id: 0,
@@ -28,9 +35,9 @@ const handleGuardar = (event) => {
 }
 
 const handleActualizar = () => {
-    setFrut(prevState => {
+    setFruts(prevState => {
         const newdatos = [...prevState]
-        const index = newdatos.findIndex((newdato) => newdato.id === frut)
+        const index = newdatos.findIndex((newdato) => newdato.id === frut.id )
         if (index > -1) {
             newdatos.splice(index, 1, frut)
        }
@@ -43,11 +50,11 @@ const restartdato = () => {
     setFrut(prevState => {
         const object = {...prevState}
         object.id = 0
-        object.fruta =''
-        object.verduras ='' 
-        object.legunbres =''
-        object.carne =''
-        object.bebidas ='' 
+        object.fruta ='platano'
+        object.verduras ='cebollas' 
+        object.legunbres ='frijol'
+        object.carne ='cerdo'
+        object.bebidas ='refresco' 
         return object
     })
 }
