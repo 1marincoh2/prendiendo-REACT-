@@ -31,7 +31,7 @@ const CapturasInfo = () => {
             const index = newdatos.findIndex((newdato) => newdato.id === dato.id)
             if (index > -1) {
                 newdatos.splice(index, 1, dato)
-            }
+           }
             restartdato()
             return newdatos
         })

@@ -12,6 +12,7 @@ import FuncionesPage from './views/FuncionesPage';
 import ArrayPage from './views/ArrayPage';
 import FormPage from './views/FormPage';
 import Formtextpage from './views/Formtextpage';
+import Arraymodififcado from './views/Arraymodificado';
 
 
 const routes = {
@@ -56,6 +57,11 @@ const routes = {
 		{
 			path: '/Inputtext',
 			component: Formtextpage
+		},
+
+		{
+			path: '/Arraymodificado',
+			component: Arraymodififcado
 		},
 
 	]
