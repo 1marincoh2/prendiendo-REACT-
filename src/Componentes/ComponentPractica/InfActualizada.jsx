@@ -33,11 +33,11 @@ const CapturasInfo = () => {
 
     const [frut, setFrut] = useState({
         id: 0,
-        fruta: 'platano',
-        verduras: 'cebollas',
-        legunbres: 'frijol',
-        carne: 'cerdo',
-        bebidas: 'refresco'
+        fruta: '',
+        verduras: '',
+        legunbres: '',
+        carne: '',
+        bebidas: ''
 
     });
     const [abrir, setAbrir] = useState(false);
