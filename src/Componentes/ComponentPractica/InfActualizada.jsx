@@ -4,12 +4,25 @@ import {Form, Button, Card, Row, Col, Table} from 'react-bootstrap'
 const CapturasInfo = () => {
 
     const [fruts, setFruts] = useState([
-        {id:1,fruta: 'platano'},
-        {id:2, verduras: 'cebollas'},
-        {id:3, legunbres: 'frijol'},
-        {id:4, carne: 'cerdo'},
-        {id:5,bebidas: 'refresco'}
-       
+        {  id: 1,
+            fruta: 'platano',
+            verduras: 'cebollas',
+            legunbres: 'frijol',
+            carne: 'cerdo',
+            bebidas: 'refresco'},
+        { id: 2,
+            fruta: 'platano',
+            verduras: 'cebollas',
+            legunbres: 'frijol',
+            carne: 'cerdo',
+            bebidas: 'refresco'},
+        { id: 3,
+            fruta: 'platano',
+            verduras: 'cebollas',
+            legunbres: 'frijol',
+            carne: 'cerdo',
+            bebidas: 'refresco'},
+        
       ]);
 
     const [frut, setFrut] = useState({
