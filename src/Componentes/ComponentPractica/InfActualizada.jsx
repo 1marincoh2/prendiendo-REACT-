@@ -76,7 +76,7 @@ const InfActualizada = () => {
     const handleEliminar = (dat) => {
         setFruts(prevState => {
             const borrardatos = [...prevState]
-            const index = borrardatos.findIndex((borrar) => dat.id)
+            const index = borrardatos.findIndex((borrar) =>borrar.id === dat.id)
             if (index > -1) {
                 borrardatos.splice(index, 1 )
             }
