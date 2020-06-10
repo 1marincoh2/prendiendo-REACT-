@@ -86,7 +86,7 @@ const InfActualizada = () => {
 
        }
 
-                const restartdato = () => {
+         const restartdato = () => {
         setFrut(prevState => {
             const object = { ...prevState }
             object.id = 0

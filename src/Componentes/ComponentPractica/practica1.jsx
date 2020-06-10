@@ -3,40 +3,40 @@ import React from 'react';
 
 
 function practica1 () {
- 
-    const frutas={
-        id: 0,
-        fruta: 'platano',
-        verduras: 'cebolla',
-        legunbres: 'frijol',
-        carne: 'cerdo',
-        bebidas: 'refresco'
+
+    const string1  ={
+     
+      objeto: ['casa', 'caro', 'tele', 'radio', 'ventilador', 'mesa','silla','baño'],
+        
     }
-   
-    const frutdata=frutas.values(frutas)
+    
+   const list=string1()
+       
+        return (
+          <div>
+          	    { list.map((obj) =>
+  <li>{obj}</li>
+                )}
+             <table>
+	  <thead>
+		  <tr>
+		   <th></th>
+		  </tr>
+	  </thead>
+	  <tbody>
+	    {
+		 list.map((obj) =>(
+						 
+		  <tr>
+		   <td>{obj}</td>
+		   
+		  </tr>			 
+		 ))
+		}
+	  </tbody>
+   </table>
+             </div>
+        )
 
-
-    return (
-        <div>
-			 <table striped bordered hover>
-
-<thead>
-<tr>
-
-    <th>Accion</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-            <tr>
-            <td>{frutdata().fruta}</td>
-                  </tr>
-</tbody>
-</table>
-		</div>
-	);
-}
-
+}   
 export default practica1;
