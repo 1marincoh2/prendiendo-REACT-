@@ -1,6 +1,6 @@
 import React from 'react';
 import Ejemplo from '../Componentes/ejemplo';
-import practica1 from '../Componentes/ComponentPractica/practica1';
+import Practica1 from '../Componentes/ComponentPractica/practica1';
 
 function HomePage() {
 
@@ -8,7 +8,7 @@ function HomePage() {
         <div className="HomePage">
 				HomePage
 				<Ejemplo></Ejemplo>
-				<practica1></practica1>
+				<Practica1></Practica1>
 		</div>
 	);
 }

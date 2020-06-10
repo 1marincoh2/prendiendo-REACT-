@@ -16,7 +16,7 @@ function ejemplo() {
           <ul>		
 			{
 				pests.map((pet) => (
-					<li>{pet.r}</li>
+					<li key={pet.r}>{pet.r}</li>
 				))
 			}
 		  </ul>
@@ -31,7 +31,7 @@ function ejemplo() {
 	    {
 		 pests.map((pet) =>(
 						 
-		  <tr>
+		  <tr key={pet.r}>
 		   <td>{pet.n}</td>
 		   <td>{pet.r}</td>
 		  </tr>			 
