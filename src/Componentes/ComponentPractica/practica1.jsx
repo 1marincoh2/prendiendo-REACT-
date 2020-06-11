@@ -67,6 +67,7 @@ function Practica1() {
                 const object = {...prevState}
                 object[name] = value
                 return object
+                
             })
     
         }
@@ -78,8 +79,11 @@ function Practica1() {
             setLista(prevState=> {
                 prevState.texto=datoEditar
                
-                return prevenState
-            })                     
+                return prevState
+                
+            })  
+            handleShow ()
+                   
             }
 
   
