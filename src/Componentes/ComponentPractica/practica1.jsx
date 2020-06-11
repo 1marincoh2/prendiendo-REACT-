@@ -27,9 +27,9 @@ function Practica1() {
     const handleActualizar = () => {
         setList(prevState => {
             const newdatos = [...prevState]
-            const index = newdatos.findIndex((newdato) => newdato ===  lista.texto )
+            const index = newdatos.findIndex((newdato) => newdato ===  datoanterior )
             if (index > -1) {
-                newdatos.splice(index, 1, list)
+                newdatos.splice(index, 1, lista.texto)
             }
             restartlista()
             return newdatos
@@ -56,9 +56,12 @@ function Practica1() {
             setLista(prevState => {
                 const object = {...prevState}
                 object.texto = ''
+                return object;
                 
             })
+            datoanterior()
         }
+        
     
         const changeInput = (evt, clave) => {
             const {name, value} = evt.target;
