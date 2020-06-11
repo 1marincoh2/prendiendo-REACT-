@@ -4,24 +4,80 @@ import { Card,Button,Modal } from 'react-bootstrap';
 function Practica1() {
 
     const list = ['casa', 'caro', 'tele', 'radio', 'ventilador', 'mesa', 'silla', 'baño'];
- 
-    const handleChange = (evt) => {
-        list(evt.target.value);
-        }
-
+    const[lista, setLista ]= useState({
+        
+        texto:'',
+        
+    });
+    
     const [abrir, setAbrir] = useState(false);
 
     const handleClose = () => setAbrir(false);
     const handleShow = () => setAbrir(true);
 
-            
+                  
+    
+    const handleActualizar = () => {
+        setLista(prevState => {
+            const newdatos = [...prevState]
+            const index = newdatos.findIndex((newdato) => newdato.id === lista.id)
+            if (index > -1) {
+                newdatos.splice(index, 1, list)
+            }
+            restartlista()
+            return newdatos
+        })
+        handleClose() 
+    }     
+    
+    const handleEliminar = (obj) => {
+        setLista(prevState => {
+            const borrardatos = [...prevState]
+            const index = borrardatos.findIndex((borrar) =>borrar.id === obj.id)
+            if (index > -1) {
+                borrardatos.splice(index, 1 )
+            }
+            return borrardatos
+                })
+
+
+       }
+
+        
+    
+        const restartlista = () => {
+            setLista(prevState => {
+                const object = {...prevState}
+                object.texto = ''
+                
+            })
+        }
+    
+        const changeInput = (evt, clave) => {
+            const {name, value} = evt.target;
+    
+            setLista(prevState => {
+                const object = {...prevState}
+                object[name] = value
+                return object
+            })
+    
+        }
+    
+
+        const editar = (datoEditar) => {
+            handleActualizar()
+            setLista(datoEditar)
+             handleShow()
+        }        
   
   
    
        
     return (
         <div >
-                
+        
+
             <Modal show={abrir} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Ingresa los Datos</Modal.Title>
@@ -30,31 +86,31 @@ function Practica1() {
 
                     <Card.Body>
 
-                        <Modal.Body>Fruta <input type="text"
+                        <Modal.Body>lista<input type="text"
                             value={list}
-                            name="list"
-                            onChange={handleChange} />
+                            name="texto"
+                            onChange={changeInput} />
                         </Modal.Body>
-                        
-
+                       
                     </Card.Body>
                 </Card>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
           </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                      
-                    </Button>
+                   
                 </Modal.Footer>
-            </Modal>
-
+            </Modal> 
  {list.map((obj) =>
 <Card style={{ width: '18rem' }}>
 <Card.Body>
-<Button variant="primary" onClick={handleShow}>
-                agregar datos
-      </Button>
+<Button onClick={() => {
+                                        editar(obj)
+                                    }}>Editar</Button>
+                                    <Button onClick={() => {
+                                      handleEliminar(obj)
+                                    }}>eliminar</Button>
+
 
 <Card.Title>lista</Card.Title>
 
