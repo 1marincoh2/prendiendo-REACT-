@@ -52,14 +52,15 @@ function Practica1() {
 
         
     
-        const restartlista = () => {
+        const restartlista = () => { 
+             setDatoanterior('')
             setLista(prevState => {
                 const object = {...prevState}
                 object.texto = ''
                 return object;
                 
             })
-            datoanterior()
+            
         }
         
     
