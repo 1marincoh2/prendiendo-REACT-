@@ -3,7 +3,7 @@ import { Card,Button,Modal } from 'react-bootstrap';
 
 function Practica1() {
 
-    const [list setList] = useState(['casa', 'caro', 'tele', 'radio', 'ventilador', 'mesa', 'silla', 'baño']
+    const [list, setList] = useState(['casa', 'caro', 'tele', 'radio', 'ventilador', 'mesa', 'silla', 'baño']
     
     )
     const[lista, setLista ]= useState({
