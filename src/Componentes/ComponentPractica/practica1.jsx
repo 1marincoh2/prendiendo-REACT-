@@ -10,6 +10,7 @@ function Practica1() {
 
     const[datoanterior, setDatoanterior ]= useState('')
 
+    
     const[lista, setLista ]= useState({
         
         texto:'',
@@ -26,7 +27,7 @@ function Practica1() {
     const handleActualizar = () => {
         setList(prevState => {
             const newdatos = [...prevState]
-            const index = newdatos.findIndex((newdato) => newdato === lista.texto )
+            const index = newdatos.findIndex((newdato) => newdato ===  lista.texto )
             if (index > -1) {
                 newdatos.splice(index, 1, list)
             }
@@ -71,12 +72,16 @@ function Practica1() {
         }
     
 
+        
         const editar = (datoEditar) => {
-            setDatoanterior(prevState => {
-            setLista(datoEditar)
-             handleShow()
-              })        
-    }
+              setDatoanterior(datoEditar)
+            setLista(prevState=> {
+                prevState.texto=datoEditar
+               
+                return prevenState
+            })                     
+            }
+
   
    
        
@@ -93,7 +98,7 @@ function Practica1() {
                     <Card.Body>
 
                         <Modal.Body>lista<input type="text"
-                            value={lista}
+                            value={lista.texto}
                             name="texto"
                             onChange={changeInput} />
                         </Modal.Body>
