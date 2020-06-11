@@ -38,9 +38,9 @@ function Practica1() {
     }     
     
     const handleEliminar = (obj) => {
-        setLista(prevState => {
+        setList(prevState => {
             const borrardatos = [...prevState]
-            const index = borrardatos.findIndex((borrar) =>borrar.id === obj.id)
+            const index = borrardatos.findIndex((borrar) =>borrar === obj)
             if (index > -1) {
                 borrardatos.splice(index, 1 )
             }
