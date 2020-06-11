@@ -6,7 +6,7 @@ function Practica1() {
     const list = ['casa', 'caro', 'tele', 'radio', 'ventilador', 'mesa', 'silla', 'baño'];
     const[lista, setLista ]= useState({
         
-        texto:'',
+        list:'',
         
     });
     
@@ -66,7 +66,6 @@ function Practica1() {
     
 
         const editar = (datoEditar) => {
-            handleActualizar()
             setLista(datoEditar)
              handleShow()
         }        
@@ -87,7 +86,7 @@ function Practica1() {
                     <Card.Body>
 
                         <Modal.Body>lista<input type="text"
-                            value={list}
+                            value={lista}
                             name="texto"
                             onChange={changeInput} />
                         </Modal.Body>
