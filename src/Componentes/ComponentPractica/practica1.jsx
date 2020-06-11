@@ -5,7 +5,11 @@ function Practica1() {
 
     const [list, setList] = useState(['casa', 'caro', 'tele', 'radio', 'ventilador', 'mesa', 'silla', 'baño']
     
-    )
+    
+    );
+
+    const[datoanterior, setDatoanterior ]= useState('')
+
     const[lista, setLista ]= useState({
         
         texto:'',
@@ -20,9 +24,9 @@ function Practica1() {
                   
     
     const handleActualizar = () => {
-        setLista(prevState => {
+        setList(prevState => {
             const newdatos = [...prevState]
-            const index = newdatos.findIndex((newdato) => newdato.id === lista.id)
+            const index = newdatos.findIndex((newdato) => newdato === lista.texto )
             if (index > -1) {
                 newdatos.splice(index, 1, list)
             }
@@ -68,10 +72,11 @@ function Practica1() {
     
 
         const editar = (datoEditar) => {
+            setDatoanterior(prevState => {
             setLista(datoEditar)
              handleShow()
-        }        
-  
+              })        
+    }
   
    
        
@@ -98,6 +103,9 @@ function Practica1() {
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
+                        </Button>
+                        <Button variant="secondary" onClick={handleActualizar}>
+                     Actualizar
           </Button>
                    
                 </Modal.Footer>
