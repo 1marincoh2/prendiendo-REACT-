@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Card, Row, Table, Modal,Badge } from 'react-bootstrap'
+import { Button, Card, Row, Table, Modal,Badge,Form, } from 'react-bootstrap'
 
 
 const DatosEditados = () => {
@@ -19,7 +19,7 @@ const DatosEditados = () => {
         PrimerApellido: '',
         SegundoApellido: '',
         Semestre: '',
-        Activo:true ,
+        Activo: '',
 
 
     });
@@ -152,11 +152,25 @@ const DatosEditados = () => {
                     </Card.Body>
 
                     <Card.Body class="card-header">
-                        <Modal.Body> Activo <input type="text"
-                            value={alumnos.Activo}
-                            name="Activo"
-                            onChange={changeInput} />
-                        </Modal.Body>
+      
+<Form>
+  <Form.Check 
+    type="switch"
+    checked={true}
+    name="Activo"
+    onChange={changeInput}
+    id="custom-switch"
+    label="Activo"
+  />
+  <Form.Check 
+    disabled
+    type="switch"
+    checked={false}
+     name="Activo"
+    label="Baja"
+    id="disabled-custom-switch"
+  />
+</Form>
                     </Card.Body>
                 </Card>
                 <Modal.Footer>
