@@ -39,6 +39,9 @@ const Navbar = () => {
 	<Nav.Item>
 		<Nav.Link href="/Arraymodificado">Modificando Info</Nav.Link>
 	</Nav.Item>
+	<Nav.Item>
+		<Nav.Link href="/ArrayEditar">Editando Datos</Nav.Link>
+	</Nav.Item>
 
 
  </Nav>

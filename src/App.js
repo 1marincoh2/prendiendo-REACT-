@@ -13,6 +13,7 @@ import ArrayPage from './views/ArrayPage';
 import FormPage from './views/FormPage';
 import Formtextpage from './views/Formtextpage';
 import Arraymodififcado from './views/Arraymodificado';
+import ArrayEditar from './views/ArrayEditar';
 
 
 const routes = {
@@ -62,6 +63,10 @@ const routes = {
 		{
 			path: '/Arraymodificado',
 			component: Arraymodififcado
+		},
+		{
+			path: '/ArrayEditar',
+			component: ArrayEditar
 		},
 
 	]
