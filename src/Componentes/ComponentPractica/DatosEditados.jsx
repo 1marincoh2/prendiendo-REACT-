@@ -53,7 +53,7 @@ const DatosEditados = () => {
         const Eliminar = (info) => {
             setAlumno(prevState => {
                 const borrardatos = [...prevState]
-                const index = borrardatos.findIndex((borrar) => borrar.id === info.id)
+                const index = borrardatos.findIndex((borrardatos) => borrardatos.id === info.id)
                 if (index > -1) {
                     borrardatos.splice(index, 1)
                 }
@@ -86,7 +86,7 @@ const DatosEditados = () => {
 
         }
         const editar = (datoEditar) => {
-            setAlumno(datoEditar)
+            setAlumnos(datoEditar)
             AbrirModal()
         }
 
