@@ -53,7 +53,7 @@ const DatosEditados = () => {
         const Eliminar = (info) => {
             setAlumno(prevState => {
                 const borrardatos = [...prevState]
-                const index = borrardatos.findIndex((borrardatos) => borrardatos.id === info.id)
+                const index = borrardatos.findIndex((borrar) => borrar.id === info.id)
                 if (index > -1) {
                     borrardatos.splice(index, 1)
                 }
@@ -233,10 +233,10 @@ const DatosEditados = () => {
                                         <td class="danger">{info.Semestre}</td>
                                         <td class="warning">{Activos()}</td>
 
-                                        <td class="warning">   <Button color="secondary" aria-label="add an alarm" onClick={() => {
+                                        <td class="warning">   <Button  onClick={() => {
                                             editar(info)
                                         }}>Editar</Button>
-                                            <Button aria-label="delete" disabled color="primary" onClick={() => {
+                                            <Button onClick={() => {
                                                 Eliminar(info)
                                             }}>eliminar</Button>
                                         </td>
