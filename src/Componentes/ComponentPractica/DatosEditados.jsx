@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import {Button, Card, Row, Table, Modal, Badge, Form,} from 'react-bootstrap'
+import {Button, Card, Row, Table, Modal, Badge, Form} from 'react-bootstrap'
 
 
 const DatosEditados = () => {
-
+    
     const [alumno, setAlumno] = useState([
 
         {
@@ -40,6 +40,15 @@ const DatosEditados = () => {
             PrimerApellido: 'Lopez',
             SegundoApellido: 'Lopez',
             Semestre: '3ro',
+            Activo: false
+        },
+        {
+            id: 5,
+            Matricula: 'M20Y10M00C',
+            Nombre: 'Mildred',
+            PrimerApellido: 'Pech',
+            SegundoApellido: '',
+            Semestre: '5to',
             Activo: false
         },
     ])
@@ -259,6 +268,8 @@ const DatosEditados = () => {
                             <td class="warning"><Button onClick={() => {
                             editar(info)
                             }}>Editar</Button>
+                            
+         
                             <Button onClick={() => {
                             Eliminar(info)
                             }}>eliminar</Button>
