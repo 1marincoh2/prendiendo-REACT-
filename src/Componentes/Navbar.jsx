@@ -1,81 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Nav, Button, Modal } from 'react-bootstrap';
+import { Navbar, Nav,NavDropdown, Button,Form,FormControl } from 'react-bootstrap';
 
-const Navbar = () => {
-	const [abrir, setAbrir] = useState(false);
-
-	const Close = () => setAbrir(false);
-	const Open = () => setAbrir(true);
-
+const NavbarUno = () => {
+	
 
 
 
 	return (
 
 		<div>
-			<Button variant="primary" onClick={Open}>
-				LinksPages
-      </Button>
 
-			<Modal show={abrir} onHide={Close} animation={false}>
-				<Modal.Header closeButton>
-					<Modal.Title>Paginas</Modal.Title>
-				</Modal.Header>
-				<Nav activeKey="/">
-					<Nav.Item>
-						<Nav.Link href="/"><Button variant="primary">Home</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/about"><Button variant="secondary">About</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/peticiones"><Button variant="success">HomeAxios</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/TablasPage"><Button variant="warning">TablasPage</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/Contenedores"><Button variant="danger">Contenedores</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/funciones"><Button variant="info">Funciones</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/PuntoVenta"><Button variant="dark">PuntoDVenta</Button></Nav.Link>
-					</Nav.Item>
+			<Navbar bg="light" expand="lg">
+				<Navbar.Brand href="/">Aprendiendo React</Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Collapse id="basic-navbar-nav">
+					<Nav className="mr-auto">
+						<Nav.Link href="/">Home</Nav.Link>
+						<Nav.Link href="/about">About</Nav.Link>
+						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+							<NavDropdown.Item href="/peticiones">HomeAxios</NavDropdown.Item>
+							<NavDropdown.Item href="/TablasPage">TablasPage</NavDropdown.Item>
+							<NavDropdown.Item href="/Contenedores">Contenedores</NavDropdown.Item>
+							<NavDropdown.Item href="/funciones">Funciones</NavDropdown.Item>
+							<NavDropdown.Item href="/PuntoVenta">Punto De Venta</NavDropdown.Item>
+							<NavDropdown.Item href="/formularios">Formularios</NavDropdown.Item>
+							<NavDropdown.Item href="/Inputtext">Capturas</NavDropdown.Item>
+							<NavDropdown.Item href="/Arraymodificado">ModificandoInfo</NavDropdown.Item>
+							<NavDropdown.Item href="/ArrayEditar">EditandoDatos</NavDropdown.Item>							
+							<NavDropdown.Divider />
+							<NavDropdown.Item href="/NewPage">UsandoProps</NavDropdown.Item>
+						</NavDropdown>
 					</Nav>
-
-				<Modal.Body> 
-				     <Nav.Item>
-						<Nav.Link href="/formularios"><Button variant="outline-primary">Formularios</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/Inputtext"><Button variant="outline-secondary">Capturas</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/Arraymodificado"><Button variant="outline-success">ModificandoInfo</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/ArrayEditar"><Button variant="outline-warning">EditandoDatos</Button></Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="/NewPage"><Button variant="outline-danger">UsandoProps</Button></Nav.Link>
-					</Nav.Item>
-
-                 </Modal.Body>
-				<Modal.Footer>
-					<Button variant="secondary" onClick={Close}>
-						Close
-          </Button>
-					
-        				</Modal.Footer>
-			</Modal>
-
-
-
-		</div>
+					<Form inline>
+						<FormControl type="text" placeholder="Search" className="mr-sm-2" />
+						<Button variant="outline-success">Search</Button>
+					</Form>
+				</Navbar.Collapse>
+			</Navbar>
+			</div>
+		
 
 	)
 };
-export default Navbar
+export default NavbarUno

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { createRouter } from 'the-react-router'
-import Navbar from './Componentes/Navbar';
+import NavbarUno from './Componentes/Navbar';
 import HomePage from './views/HomePage';
 import AbautPage from './views/AbautPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -83,7 +83,7 @@ function App() {
 	return (
 		<Router>
 			<div>
-				<Navbar/>
+				<NavbarUno/>
 			</div>
 			<Routes/>
 		</Router>
