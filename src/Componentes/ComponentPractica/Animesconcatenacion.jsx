@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { Button, Image, Container, Row, Col } from 'react-bootstrap';
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import {Button, Image, Container, Row, Col} from 'react-bootstrap';
+import {useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 
 const Animesconcatenacion = () => {
     const [anime, setAnime] = useState('');
     const [animes1, setAnimes1] = useState([]);
-    const [serie, setSerie] = useState({ results: [] });
+    const [serie, setSerie] = useState({results: []});
 
-    const counter = useSelector(state => state);
+    const textSearch = useSelector(state => state);
     const dispatch = useDispatch();
 
-
+    useEffect(() => {
+        console.log('a cambiado la informacion')
+    },[textSearch])
     const getSeries = () => {
 
         axios.get('https://api.jikan.moe/v3/search/anime?q=' + anime).then((reponse) => {
@@ -22,7 +24,6 @@ const Animesconcatenacion = () => {
 
         })
     }
-
 
 
     const handleChange = (evt) => {
@@ -45,49 +46,27 @@ const Animesconcatenacion = () => {
 
     return (
         <>
-            <button
-                onClick={() =>
-                    dispatch({
-                        type: "Car"
-                    })
-                }
-            >
-                Car
-    </button> &nbsp;&nbsp;&nbsp;
-            <h1>{counter.vehicle}</h1>
-            <button
-                onClick={() =>
-                    dispatch({
-                        type: "Bike"
-                    })
-                }
-            >
-                Bike
-      </button>
-
-
             <Container fluid>
 
+                <h1>{textSearch.text}</h1>
+
                 <form onSubmit={handlebuscar}>
-                    <input type="text" value={anime} onChange={handleChange} />
+                    <input type="text" value={anime} onChange={handleChange}/>
                     <Button variant="primary" onClick={() => {
                         getSeries()
                     }}>buscar</Button>
                 </form>
 
-                <Row >
+                <Row>
                     {
                         serie.results.map((personaje) => (
-                            <Col style={{ backgroundColor: '#AB47BC' }} xl={2} xs={6}>{personaje.title}
-                                <Image style={{ border: '1px solid #D81B60' }} width={"100%"} src={personaje.image_url} /></Col>
-
+                            <Col style={{backgroundColor: '#AB47BC'}} xl={2} xs={6}>{personaje.title}
+                                <Image style={{border: '1px solid #D81B60'}} width={"100%"} src={personaje.image_url}/></Col>
 
 
                         ))
 
                     }
-
-
 
 
                 </Row>

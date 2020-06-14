@@ -1,18 +1,16 @@
-import React,{ useState }  from 'react';	
- 
-function reducer(){
+import React, {useState} from 'react';
 
-const [search, setSearch]= useState('dsdf')
-
-const enviar=(texto)=> {  
-    setSearch(texto)
-
+function reducer(state = {text: ''}, action) {
+    switch (action.type) {
+        case "Search":
+            return {
+                text:  action.payload
+            };
+        default:
+            return {
+                text: ''
+            }
+    }
 }
-
-return search
-
-}
-
-
 
 export default reducer;
