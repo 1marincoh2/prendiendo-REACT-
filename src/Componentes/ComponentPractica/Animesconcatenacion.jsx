@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Button, Image, Container, Row, Col } from 'react-bootstrap';
-
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
 const Animesconcatenacion = () => {
     const [anime, setAnime] = useState('');
     const [animes1, setAnimes1] = useState([]);
     const [serie, setSerie] = useState({ results: [] });
+
+    const counter = useSelector(state => state);
+    const dispatch = useDispatch();
+
 
     const getSeries = () => {
 
@@ -40,7 +45,25 @@ const Animesconcatenacion = () => {
 
     return (
         <>
-
+            <button
+                onClick={() =>
+                    dispatch({
+                        type: "Car"
+                    })
+                }
+            >
+                Car
+    </button> &nbsp;&nbsp;&nbsp;
+            <h1>{counter.vehicle}</h1>
+            <button
+                onClick={() =>
+                    dispatch({
+                        type: "Bike"
+                    })
+                }
+            >
+                Bike
+      </button>
 
 
             <Container fluid>

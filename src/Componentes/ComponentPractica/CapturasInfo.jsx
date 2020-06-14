@@ -1,7 +1,11 @@
 import React, {useState} from 'react'
 import {Form, Button, Card, Row, Col, Table} from 'react-bootstrap'
+import { useSelector } from "react-redux";
+
 
 const CapturasInfo = () => {
+
+    const counter = useSelector(state => state);
 
     const [datos, setDatos] = useState([]);
 
@@ -66,7 +70,7 @@ const CapturasInfo = () => {
 
     return (
         <>
-
+            {counter.vehicle}
             <Row>
                 <Col xl={4} xs={4}></Col>
                 <Col xl={4} xs={4}>
