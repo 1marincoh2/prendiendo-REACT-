@@ -9,7 +9,7 @@ const Puntodeventa = () => {
 
 
     const [venta, setVenta] = useState([
-        { nombre: 'Falda Azul Tela Tergal(sec/prepa) Talla 36', precio: 135, cantidad: 1.00 },
+        { nombre: 'Falda Azul Tela Tergal(sec/prepa) Talla 36', precio: 1350, cantidad: 2.00 },
         { nombre: 'Falda Azul Tela Tergal(sec/prepa) Talla 28', precio: 119, cantidad: 2.00 },
         { nombre: 'Falda Azul Tela Tergal(sec/prepa) Talla 30', precio: 155, cantidad: 1.00 },
         { nombre: 'Falda Azul Tela Tergal(sec/prepa) Talla 38', precio: 111, cantidad: 2.00 },
