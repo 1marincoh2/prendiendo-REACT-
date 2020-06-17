@@ -1,11 +1,11 @@
 import React from 'react';
-import formularioformik from "../Componentes/FormulariosComponents/formularioformik";
+import formulario1 from "../Componentes/FormulariosComponents/formulario1";
 
 function NewPage() {
 
 	return (
 		<div>
-			<formularioformik> </formularioformik>
+			<formulario1> </formulario1>
 
 		</div>
 	);
