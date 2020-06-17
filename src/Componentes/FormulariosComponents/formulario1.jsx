@@ -3,7 +3,7 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
 
-const formulario1 = () => {
+const Formulario1 = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const[values, setValues]= useState ({
@@ -60,4 +60,4 @@ return (
   </div>
 ) 
 };
-export default formulario1
+export default Formulario1
