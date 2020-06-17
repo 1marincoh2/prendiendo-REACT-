@@ -5,6 +5,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import Fab from '@material-ui/core/Fab';
 
+
 function Practica1() {
 
     const [list, setList] = useState(['casa', 'caro', 'tele', 'radio', 'ventilador', 'mesa', 'silla', 'baño']
@@ -132,7 +133,7 @@ function Practica1() {
             <Row>
 
                 {list.map((obj) =>
-                    <Col xs={6} md={4} style={{border: '1px solid #D81B60', backgroundColor: '#AB47BC', }}>
+                    <Col item xl={6} md={4} style={{border: '1px solid #D81B60', backgroundColor: '#AB47BC', }}>
                         {obj}
                         <Fab size="small" color="secondary" aria-label="edit">
                             <EditIcon  onClick={() => {
@@ -151,6 +152,7 @@ function Practica1() {
                 )}
 
             </Row>
+           
         </div>
     );
 }

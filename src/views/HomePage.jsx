@@ -4,6 +4,7 @@ import Practica1 from '../Componentes/ComponentPractica/practica1';
 import Mascota from '../Componentes/Mascota';
 import PropsCards from '../Componentes/ComponentPractica/PropsCards';
 
+
 function HomePage() {
 
 	return (
