@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./Store/vehicles.js";
 
+
 const vehicle = createStore(reducer);
  
 

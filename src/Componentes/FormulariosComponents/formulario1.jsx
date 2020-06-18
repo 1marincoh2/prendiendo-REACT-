@@ -1,63 +1,87 @@
-import React,{useState} from 'react';
-import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup';
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+const formulario1= () => {
 
 
-const Formulario1 = () => {
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const[values, setValues]= useState ({
-    firstName: '',
-    lastName: '',
-    email: '',
-});
-
-
-const SignupSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-  lastName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
+const LoginSchema = Yup.object().shape({
   email: Yup.string()
-    .email('Invalid email')
-    .required('Required'),
+    .email("Invalid email address format")
+    .required("Email is required"),
+  password: Yup.string()
+    .min(3, "Password must be 3 characters at minimum")
+    .required("Password is required")
 });
 
+    return (
+      <div className="container">
+        <div className="row mb-5">
+          <div className="col-lg-12 text-center">
+            <h1 className="mt-5">Login Form</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-12">
+            <Formik
+              initialValues={{ email: "", password: "" }}
+              validationSchema={LoginSchema}
+              onSubmit={({ setSubmitting }) => {
+                alert("Form is validated! Submitting the form...");
+                setSubmitting(false);
+              }}
+            >
+              {({ touched, handleSubmit,  errors, isSubmitting }) => (
+                <Form>
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <Field
+                      type="email"
+                      name="email"
+                      placeholder="Enter email"
+                      className={`form-control ${
+                        touched.email && errors.email ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      component="div"
+                      name="email"
+                      className="invalid-feedback"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <Field
+                      type="password"
+                      name="password"
+                      placeholder="Enter password"
+                      className={`form-control ${
+                        touched.password && errors.password ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      component="div"
+                      name="password"
+                      className="invalid-feedback"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-block"
+                    onClick={handleSubmit}
+ 
+                  >
+                    submit                  </button>
+                </Form>
+              )}
+            </Formik>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
 
-return (
-
-  <div>
-    <h1>Signup</h1>
-    <Formik
-      initialValues={values}
-      validationSchema={SignupSchema}
-      onSubmit={values => {
-        // same shape as initial values
-        console.log(values);
-      }}
-    >
-      {({ errors, touched }) => (
-        <Form>
-          <Field name="firstName" />
-          {errors.firstName && touched.firstName ? (
-            <div>{errors.firstName}</div>
-          ) : null}
-          <Field name="lastName" />
-          {errors.lastName && touched.lastName ? (
-            <div>{errors.lastName}</div>
-          ) : null}
-          <Field name="email" type="email" />
-          {errors.email && touched.email ? <div>{errors.email}</div> : null}
-          <button type="submit">Submit</button>
-        </Form>
-      )}
-    </Formik>
-  </div>
-) 
-};
-export default Formulario1
+export default formulario1
