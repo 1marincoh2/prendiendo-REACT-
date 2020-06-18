@@ -137,7 +137,7 @@ const CrudEjemplo = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="password">Password</label>
+                                    <label htmlFor="password">Grado</label>
                                     <Field
                                         type="text"
                                         name="grado"
