@@ -1,0 +1,14 @@
+{
+  "alumnos": [
+    {
+      "id": 1,
+      "name": "asdadsadads",
+      "grado": "typicode"
+    },
+    {
+      "id": 2,
+      "name": "asdadamir",
+      "grado": "sadsad"
+    }
+  ]
+}

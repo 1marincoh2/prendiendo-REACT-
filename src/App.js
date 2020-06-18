@@ -15,6 +15,7 @@ import Formtextpage from './views/Formtextpage';
 import Arraymodififcado from './views/Arraymodificado';
 import ArrayEditar from './views/ArrayEditar';
 import NewPage from './views/NewPage';
+import CrudPage from "./views/CrudPage";
 
 
 const routes = {
@@ -72,6 +73,10 @@ const routes = {
 		{
 			path: '/NewPage',
 			component: NewPage
+		},
+		{
+			path: '/crud',
+			component: CrudPage
 		},
 
 
