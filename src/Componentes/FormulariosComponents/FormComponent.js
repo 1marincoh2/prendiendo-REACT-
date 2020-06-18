@@ -62,7 +62,9 @@ const FormComponent = () => {
                                               placeholder="Password"/>
                                               
                             </Form.Group>
-                            
+                            <Form.Group controlId="formBasicCheckbox">	
+                                <Form.Check type="checkbox" label="Check me out"/>	
+                            </Form.Group>
                             <Button variant="primary"  onClick={handleSubmit}>
                                 Submit
                             </Button>
