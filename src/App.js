@@ -16,7 +16,7 @@ import Arraymodififcado from './views/Arraymodificado';
 import ArrayEditar from './views/ArrayEditar';
 import NewPage from './views/NewPage';
 import CrudPage from "./views/CrudPage";
-
+import CrudPage1 from "./views/CrudPage1";
 
 const routes = {
 	routes: [
@@ -77,6 +77,10 @@ const routes = {
 		{
 			path: '/crud',
 			component: CrudPage
+		},
+		{
+			path: '/crudPractica',
+			component: CrudPage1
 		},
 
 
