@@ -1,19 +1,9 @@
 {
   "alumnos": [
     {
-      "id": 2,
-      "name": "jose",
-      "grado": "sadsad"
-    },
-    {
-      "id": 3,
-      "name": "amir",
-      "grado": "2do"
-    },
-    {
-      "id": 4,
+      "id": 1,
       "name": "jose alberto",
-      "grado": "marincoh"
+      "grado": "6to"
     }
   ],
   "animales": [

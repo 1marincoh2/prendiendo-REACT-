@@ -12,7 +12,7 @@ function HomePage() {
 		<div style={{border: '1px solid #D81B60'}} class="container">
 				HomePage
 		<div class="row align-items-start">
-		  <div style={{border: '1px solid #D81B60'}}  class="col">
+		  <div style={{border: '1px solid #D81B60'}}  class="col-sm-6 col-md-6 col-lg-4">
 		  <PropsCards
 				titulo="Nuevas Actividades"
 				subtitulo="Aprendiendo props"
@@ -22,15 +22,15 @@ function HomePage() {
 			></PropsCards>
 
 		  </div>
-		  <div style={{border: '1px solid #D81B60'}}  class="col">
+		  <div style={{border: '1px solid #D81B60'}}  class="col-sm-6 col-md-6 col-lg-4">
 		  <Mascota name="boby" species="perro" ></Mascota>
 		  </div>
-		  <div style={{border: '1px solid #D81B60'}}  class="col">
+		  <div style={{border: '1px solid #D81B60'}}  class="col-sm-6 col-md-6 col-lg-4">
 		  <Ejemplo></Ejemplo>
 		  </div>
 		</div>
 		<div class="row align-items-center">
-		  <div class="col-sm-12 col-md-12 col-lg-12">
+		  <div class="col-sm-6 col-md-6 col-lg-12">
 		  <Practica1></Practica1>
 
 		  </div>

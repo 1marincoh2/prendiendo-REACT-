@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import {Button,Modal, Table} from "react-bootstrap";
 import {ErrorMessage, Field, Formik} from "formik";
 import Form from "react-bootstrap/Form";
@@ -19,6 +19,10 @@ const CrudEjemplo = () => {
 
     const handleClose = () => setShow(false);
 
+
+    useEffect(() => {
+        obtenerAnimales();
+    }, [])
     const obtenerAnimales = async () => {
         const data = await axios.get(apiUrl + 'animales').then((response => response));
         const animal1 = data.data || [];
