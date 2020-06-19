@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
+import {useRun} from "../hooks/run/useRun";
+import {useRunAllInOne} from "../hooks/runAllInOne/useRunAllInOneState";
 
 function AbautPage() {
-
+    const {run, clickRun} = useRun();
+    const {runAll, clickRunAll} = useRunAllInOne();
     return (
 		<div className="AbautPage">
 				AbautPage
@@ -20,6 +23,35 @@ function AbautPage() {
     <Card.Link href="/">Another Link</Card.Link>
   </Card.Body>
 </Card>
+
+            <div style={{border: '1px solid #D81B60'}} className="col">
+                state runAll {JSON.stringify(runAll)}
+                <Button variant="primary" onClick={() => {
+                    clickRunAll(true)
+                }}>
+                    change runAll  true
+                </Button>
+                <Button variant="primary" onClick={() => {
+                    clickRunAll(false)
+                }}>
+                    change runAll false
+                </Button>
+            </div>
+
+
+            <div style={{border: '1px solid #D81B60'}} className="col">
+                state run {JSON.stringify(run)}
+                <Button variant="primary" onClick={() => {
+                    clickRun(true)
+                }}>
+                    change run  true
+                </Button>
+                <Button variant="primary" onClick={() => {
+                    clickRun(false)
+                }}>
+                    change run false
+                </Button>
+            </div>
 		</div>
 	);
 }

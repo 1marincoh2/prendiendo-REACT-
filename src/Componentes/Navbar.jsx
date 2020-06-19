@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { Navbar, Nav, NavDropdown, Button, Form, FormControl, Breadcrumb } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
+import {useNavigation} from "the-react-router";
 
 const NavbarUno = () => {
     const textSearch = useSelector(state => state);
@@ -9,7 +10,7 @@ const NavbarUno = () => {
 
     const [captura, setCaptura] = useState('');
 
-
+    const { navigate } = useNavigation()
     return (
 
         <div>
@@ -20,8 +21,8 @@ const NavbarUno = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Breadcrumb>
-                            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                            <Breadcrumb.Item href="/about">About</Breadcrumb.Item>
+                            <Breadcrumb.Item onClick={() => navigate('/')}>Home</Breadcrumb.Item>
+                            <Breadcrumb.Item onClick={() => navigate('/about')}>About</Breadcrumb.Item>
                             <Breadcrumb.Item active>
                                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                                     <NavDropdown.Item href="/peticiones">HomeAxios</NavDropdown.Item>
