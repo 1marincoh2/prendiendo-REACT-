@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button, Card, Row, Table, Modal, Badge, Form} from 'react-bootstrap'
+import {Button, Card, Row, Table, Modal, Badge, Form,Col} from 'react-bootstrap'
 
 
 const DatosEditados = () => {
@@ -231,13 +231,13 @@ const DatosEditados = () => {
                             } `}</style>
 
 
-                            <Table striped bordered hover class="table-responsive">
+                            <Table striped bordered hover  class="table-responsive">
 
                             <thead>
                             <tr>
 
-                            <th scope="col"> Id</th>
-                            <th scope="col">MATRICULA</th>
+                           <th scope="col"> Id </th> 
+                             <th scope="col">MATRICULA</th> 
                             <th scope="col">NOMBRES</th>
                             <th scope="col">PRIMER APELLIDO</th>
                             <th scope="col">SEGUN APELLIDO</th>
@@ -255,8 +255,8 @@ const DatosEditados = () => {
                             {
                             alumno.map((info) => (
                             <tr key={info.id}>
-                            <td class="active">{info.id}</td>
-                            <td class="success">{info.Matricula}</td>
+                               <td class="active">{info.id}</td>    
+                         <td class="success"> {info.Matricula} </td>  
                             <td class="warning">{info.Nombre}</td>
                             <td class="danger">{info.PrimerApellido}</td>
                             <td class="success">{info.SegundoApellido}</td>
