@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import axios from "axios";
 // json-server db.json --port 4000
 const CrudEjemplo = () => {
-    const apiUrl = 'http://localhost:4000/';
+    const apiUrl = 'https://jsonserver2314.herokuapp.com/';
     const [animals, setAnimals] = useState([]);
     const [animal, setAnimal] = useState({
         id: 0,

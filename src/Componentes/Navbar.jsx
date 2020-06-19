@@ -25,7 +25,7 @@ const NavbarUno = () => {
                             <Breadcrumb.Item onClick={() => navigate('/about')}>About</Breadcrumb.Item>
                             <Breadcrumb.Item active>
                                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="/peticiones">HomeAxios</NavDropdown.Item>
+                                    <NavDropdown.Item onClick={() => navigate('/peticiones')}>HomeAxios</NavDropdown.Item>
                                     <NavDropdown.Item href="/TablasPage">TablasPage</NavDropdown.Item>
                                     <NavDropdown.Item href="/Contenedores">Contenedores</NavDropdown.Item>
                                     <NavDropdown.Item href="/funciones">Funciones</NavDropdown.Item>
@@ -36,6 +36,8 @@ const NavbarUno = () => {
                                     <NavDropdown.Item href="/ArrayEditar">EditandoDatos</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="/NewPage">UsandoProps</NavDropdown.Item>
+                                    <NavDropdown.Item href="/crud">Crudalumno</NavDropdown.Item>
+                                    <NavDropdown.Item href="/crudPractiva">CrudAnimal</NavDropdown.Item>
                                 </NavDropdown>
                             </Breadcrumb.Item>
                         </Breadcrumb>
