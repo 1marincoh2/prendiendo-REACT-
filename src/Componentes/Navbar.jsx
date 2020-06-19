@@ -37,7 +37,7 @@ const NavbarUno = () => {
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="/NewPage">UsandoProps</NavDropdown.Item>
                                     <NavDropdown.Item href="/crud">Crudalumno</NavDropdown.Item>
-                                    <NavDropdown.Item href="/crudPractiva">CrudAnimal</NavDropdown.Item>
+                                    <NavDropdown.Item href="/crudPractica">CrudAnimal</NavDropdown.Item>
                                 </NavDropdown>
                             </Breadcrumb.Item>
                         </Breadcrumb>

@@ -228,16 +228,16 @@ const CrudEjemplo = () => {
             <Button variant="primary" onClick={obtenerAnimales}>
                 Obtener
             </Button>
-            <Table striped bordered hover>
-                <thead>
+            <Table striped bordered hover class="table">
+                <thead class="thead-dark">
                 <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th>Tipo</th>
-                    <th>Peligroso</th>
-                    <th>Raza</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Peligroso</th>
+                    <th scope="col">Raza</th>
 
-                    <th>Acciones</th>
+                    <th scope="col">Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -246,7 +246,7 @@ const CrudEjemplo = () => {
                     // Without the `key`, React will fire a key warning
                     <React.Fragment key={item.id}>
                         <tr>
-                            <td>{item.id}</td>
+                            <th scope="row">{item.id}</th>
                             <td>{item.name}</td>
                             <td>{item.tipoanimal}</td>
                             <td>{item.peligroso}</td>
